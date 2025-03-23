@@ -23,7 +23,7 @@ const About: React.FC = () => {
       className: "col-span-1 row-span-1",
     },
     {
-      src: "https://github.com/vishalkumarojha/Portfolio--VishalOjha/blob/main/img/WhatsApp%20Image%202025-03-23%20at%2013.30.01.jpeg?raw=true",
+      src: "https://github.com/vishalkumarojha/photo-gallary/blob/main/evolve/WhatsApp%20Image%202025-03-23%20at%2022.52.33.jpeg?raw=true",
       alt: "Coding session",
       className: "col-span-1 row-span-1",
     },
@@ -46,9 +46,9 @@ const About: React.FC = () => {
           <div>
             <h2 className="text-3xl font-bold mb-6">About Me</h2>
             <p className="text-gray-600 mb-4">
-              I'm a 2nd-year student at VIT University, Bhopal, passionate about building impactful tech solutions. As
-              the Founder of ArnoCodes, builder of HackCrusade, and CTO of ScrambleLabs, I specialize in full-stack
-              development (MERN), UI/UX design, and frameworks like React, Django & Flask. With 55K+ LinkedIn
+              I'm a sophomore @VIT Bhopal University, passionate about building impactful tech solutions. As
+              the Founder of ArnoCodes, and currently building HackCrusade, and CTO of ScrambleLabs, I specialize in full-stack
+              development (MERN), UI/UX design, and frameworks like React, Django & Flask. With 75K+ LinkedIn
               impressions, I also have experience in content writing and video editing, helping me communicate technical
               ideas effectively.
             </p>

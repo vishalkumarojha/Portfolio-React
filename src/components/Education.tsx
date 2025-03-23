@@ -40,7 +40,7 @@ const Education: React.FC = () => {
         <div className="relative max-w-3xl mx-auto pl-8 border-l-2 border-gray-200">
           {education.map((edu) => (
             <div className="relative mb-12 last:mb-0" key={edu.id}>
-              <div className="absolute -left-[17px] top-1.5 w-8 h-8 bg-white">
+              <div className="absolute -left-[17px] top-1.5 w-8 h-8">
                 <div className="w-3 h-3 bg-black rounded-full border-2 border-white shadow-[0_0_0_2px_rgba(0,0,0,1)]"></div>
               </div>
               <div>
