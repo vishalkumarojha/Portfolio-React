@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base target="_top">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .success {
+      color: green;
+      font-weight: bold;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h2>Contact Form</h2>
+    <form id="contactForm">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <div style="margin-top: 10px;">
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+    <div id="result" style="margin-top: 20px;"></div>
+  </div>
+  
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value;
+      
+      google.script.run
+        .withSuccessHandler(function(result) {
+          document.getElementById('result').innerHTML = '<p class="success">' + result + '</p>';
+          document.getElementById('name').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('subject').value = '';
+          document.getElementById('message').value = '';
+        })
+        .withFailureHandler(function(error) {
+          document.getElementById('result').innerHTML = '<p class="error">Error: ' + error + '</p>';
+        })
+        .doPost({parameter: {
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
+          form: "contact"
+        }});
+    });
+  </script>
+</body>
+</html>
+
