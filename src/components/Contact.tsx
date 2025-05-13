@@ -186,15 +186,15 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="text-sm font-medium text-gray-700">Email</h4>
                     <a
-                      href="mailto:hello@vishalkumarojha.com"
+                      href="mailto:work.vishalojha@gmail.com"
                       className="text-gray-600 hover:text-black transition-colors"
                     >
-                      hello@vishalkumarojha.com
+                      work.vishalojha@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                {/* <div className="flex items-start">
                   <div className="bg-gray-100 p-3 rounded-full mr-4">
                     <Phone className="w-5 h-5 text-gray-700" />
                   </div>
@@ -204,7 +204,7 @@ const Contact: React.FC = () => {
                       +91 98765 43210
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start">
                   <div className="bg-gray-100 p-3 rounded-full mr-4">
@@ -225,7 +225,7 @@ const Contact: React.FC = () => {
                 Topmate.
               </p>
               <a
-                href="https://topmate.io/yourusername"
+                href="https://topmate.io/vishal_ojha10"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-black text-white font-semibold rounded-md hover:bg-gray-800 transition-colors inline-block"
