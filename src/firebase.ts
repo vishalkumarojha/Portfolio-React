@@ -4,18 +4,24 @@ import { getAnalytics } from "firebase/analytics"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCl1bVXp0UFUuoRKrkfQeAeR2-0WKnnBcc",
-  authDomain: "portfolio-ec91b.firebaseapp.com",
-  projectId: "portfolio-ec91b",
-  storageBucket: "portfolio-ec91b.firebasestorage.app",
-  messagingSenderId: "957180077380",
-  appId: "1:957180077380:web:6e46cac35fd919e6dae311",
-  measurementId: "G-W2KM02MH2J",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 }
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
 export const db = getFirestore(app)
-export const analytics = getAnalytics(app)
+
+// Only initialize analytics in the browser environment
+let analytics = null
+if (typeof window !== "undefined") {
+  analytics = getAnalytics(app)
+}
+export { analytics }
 
 export default app
