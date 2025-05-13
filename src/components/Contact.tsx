@@ -37,6 +37,11 @@ const Contact: React.FC = () => {
     setError("")
 
     try {
+      // Check if Firebase is initialized
+      if (!db) {
+        throw new Error("Firebase is not initialized. Please check your environment configuration.")
+      }
+
       // Add document to Firestore
       await addDoc(collection(db, "contactSubmissions"), {
         name: formData.name,
@@ -184,22 +189,22 @@ const Contact: React.FC = () => {
                       href="mailto:hello@vishalkumarojha.com"
                       className="text-gray-600 hover:text-black transition-colors"
                     >
-                      work.vishalojha@gmail.com
+                      hello@vishalkumarojha.com
                     </a>
                   </div>
                 </div>
 
-                {/* <div className="flex items-start">
+                <div className="flex items-start">
                   <div className="bg-gray-100 p-3 rounded-full mr-4">
                     <Phone className="w-5 h-5 text-gray-700" />
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-700">Phone</h4>
                     <a href="tel:+919876543210" className="text-gray-600 hover:text-black transition-colors">
-                      +91 
+                      +91 98765 43210
                     </a>
                   </div>
-                </div> */}
+                </div>
 
                 <div className="flex items-start">
                   <div className="bg-gray-100 p-3 rounded-full mr-4">
@@ -220,7 +225,7 @@ const Contact: React.FC = () => {
                 Topmate.
               </p>
               <a
-                href="https://topmate.io/vishal_ojha10"
+                href="https://topmate.io/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-black text-white font-semibold rounded-md hover:bg-gray-800 transition-colors inline-block"
