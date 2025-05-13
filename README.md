@@ -1,4 +1,4 @@
-# 🌐 Vishal Ojha – Developer Portfolio
+# 🌐 Vishal Ojha –  Portfolio
 
 [![GitHub Stars](https://img.shields.io/github/stars/vishalkumarojha/Portfolio-React?style=social)](https://github.com/vishalkumarojha/Portfolio-React/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
