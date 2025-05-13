@@ -22,22 +22,40 @@ const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   const projects: Project[] = [
+    // {
+    //   id: 4,
+    //   title: "ArnoCodes",
+    //   description:
+    //     "A tech-based platform offering the best DSA practice sheets and resources. It is a one-stop solution for all your DSA needs. It is a platform where you can practice DSA problems, participate in contests, and learn from the best resources available.",
+    //   image:
+    //     "https://github.com/vishalkumarojha/testimonials-section/blob/main/css/Screenshot%202025-03-23%20144604.png?raw=true",
+    //   category: "Web Development",
+    //   technologies: ["React.js", "Notion Productivity Software", "appwrite", "Next.js", "Typescript"],
+    //   link: "https://github.com/vishalkumarojha/ArnoCodes",
+    //   problem: "Need for an simpilfied platform for startinf the DSA and Development journey",
+    //   solution: "A tech-based platform offering the best DSA practice sheets and resources.Features a structured course covering 25 essential steps in Data Structures and Algorithms.Each step includes live lectures, with every lecture containing in-depth lessons, practice questions for a complete learning experience.",
+    //   result: "Created an entertaining platform that promotes learning through gamification.",
+    // },
     {
-      id: 4,
-      title: "ArnoCodes",
+      id: 1,
+      title: "ArnoX (Image to Speech Converter App)",
       description:
-        "A tech-based platform offering the best DSA practice sheets and resources. It is a one-stop solution for all your DSA needs. It is a platform where you can practice DSA problems, participate in contests, and learn from the best resources available.",
+        "ArnoX is an image-to-speech narration app designed to assist visually impaired individuals. The app captures photos of objects, describes their appearance, recognizes written characters, and narrates them effectively.",
       image:
-        "https://github.com/vishalkumarojha/testimonials-section/blob/main/css/Screenshot%202025-03-23%20144604.png?raw=true",
-      category: "Web Development",
-      technologies: ["React.js", "Notion Productivity Software", "appwrite", "Next.js", "Typescript"],
-      link: "https://github.com/vishalkumarojha/ArnoCodes",
-      problem: "Need for an simpilfied platform for startinf the DSA and Development journey",
-      solution: "A tech-based platform offering the best DSA practice sheets and resources.Features a structured course covering 25 essential steps in Data Structures and Algorithms.Each step includes live lectures, with every lecture containing in-depth lessons, practice questions for a complete learning experience.",
-      result: "Created an entertaining platform that promotes learning through gamification.",
+        "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/drawer.png?raw=true",
+      category: "App Development",
+      technologies: ["Flutter", "Dart", "Firebase", "Google ML Kit"],
+      link: "https://github.com/vishalkumarojha/ArnoX",
+      problem:
+        "Visually impaired individuals face challenges in identifying objects and reading text in their environment.",
+      solution:
+        "Developed a mobile application that uses machine learning to identify objects and text in images, converting them to speech.",
+      result:
+        "Created an accessible tool that helps visually impaired users navigate their environment more independently.",
+      collaboration: "Developed it during the University Project Exibition 1",
     },
     {
-      id: 5,
+      id: 2,
       title: "AdVITya’25: [ flagship Annual Techno-Cultural and sports fest of VITB University]",
       description:
         "The Website hosted 130+ Technical and Non-technical Events along with their registration,The Website has Key Highlights , Celebrity , organiser , guest speakers , listed along with a ticketing system",
@@ -52,66 +70,49 @@ const Projects: React.FC = () => {
       result: "Website handled 600K request in 30 days consuming 550 GB of bandwidth,hosted 130+ Technical and Non-technical Events along with their registration,",
     },
     {
-      id: 6,
+      id: 3,
       title: "Farm-O-Help",
       description:
         "A mobile applications to help farmers to identify diesese of plants , improve its yield ,predict wheather , and rent tools cheaply available in the market",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbwQ_S2nvM5EUvF5zJfuavvdIOm9Ojebskgw&s?height=600&width=600",
-      category: "App Development",
+      category: "Machine Learning",
       technologies: ["Flutter","machine learning", "Dart", "Firebase", "Kraggle dataset", "Google Collab" , "Python"],
       link: "https://github.com/vishalkumarojha",
       problem: "Traditional it lacks an applications to help farmers to identify diesese of plants , improve its yield ,predict wheather , and rent tools cheaply available in the market",
       solution: "Developed a cross platform application identify diesese of plants , improve its yield ,predict wheather , and rent tools cheaply available in the market",
       result: "Its detect diseases , Provide tool rental facility and predict the soil and weather of the area .Features - Secured Authentication , Multilingual for efficient use, Smart connect , Weather",
     },
-    {
-      id: 1,
-      title: "ArnoX (Image to Speech Converter App)",
-      description:
-        "ArnoX is an image-to-speech narration app designed to assist visually impaired individuals. The app captures photos of objects, describes their appearance, recognizes written characters, and narrates them effectively.",
-      image:
-        "https://github.com/vishalkumarojha/testimonials-section/blob/main/css/drawer.png?raw=true",
-      category: "App Development",
-      technologies: ["Flutter", "Dart", "Firebase", "Google ML Kit"],
-      link: "https://github.com/vishalkumarojha/ArnoX",
-      problem:
-        "Visually impaired individuals face challenges in identifying objects and reading text in their environment.",
-      solution:
-        "Developed a mobile application that uses machine learning to identify objects and text in images, converting them to speech.",
-      result:
-        "Created an accessible tool that helps visually impaired users navigate their environment more independently.",
-      collaboration: "Developed it during the University Project Exibition 1",
-    },
-    {
-      id: 2,
-      title: "Buildrapo (Resume/Career Path Organiser)",
-      description:
-        "BuildRapo is an AI-powered platform that enhances career success by offering personalized guidance. Using advanced AI algorithms and Large Language Models (LLMs), it optimizes resumes for ATS compatibility, tailors advice based on user interests, and provides structured learning paths.",
-      image:
-        "https://github.com/vishalkumarojha/testimonials-section/blob/main/css/1724776881249.jpg?raw=true",
-      category: "AI/ML, Web Development",
-      technologies: ["React", "Python", "OpenAI API", "MongoDB"],
-      link: "#",
-      problem: "Job seekers struggle to create ATS-optimized resumes and find personalized career guidance.",
-      solution:
-        "Built an AI platform that analyzes resumes, suggests improvements, and provides customized career paths.",
-      result:
-        "Helped users improve their resume quality and receive tailored career advice based on their skills and interests.",
-    },
-    {
-      id: 3,
-      title: "RushX (E-commerce Website)",
-      description:
-        "RushX, an e-commerce website developed for the Build for Bharat competition. This project features an AI-powered chatbox that allows users to ask questions and receive instant assistance, significantly enhancing the shopping experience.",
-      image: "https://github.com/vishalkumarojha/testimonials-section/blob/main/css/intro.jpg?raw=true",
-      category: "Web Development",
-      technologies: ["Django", "Python", "JavaScript", "Bootstrap"],
-      link: "https://github.com/vishalkumarojha/E-commerce-RUSHX-",
-      problem:
-        "Traditional e-commerce platforms lack personalized customer support and intuitive shopping experiences.",
-      solution: "Created an e-commerce platform with an AI-powered chatbot to provide instant customer assistance.",
-      result: "Enhanced user experience with real-time support, leading to improved customer satisfaction.",
-    },
+    
+    // {
+    //   id: 2,
+    //   title: "Buildrapo (Resume/Career Path Organiser)",
+    //   description:
+    //     "BuildRapo is an AI-powered platform that enhances career success by offering personalized guidance. Using advanced AI algorithms and Large Language Models (LLMs), it optimizes resumes for ATS compatibility, tailors advice based on user interests, and provides structured learning paths.",
+    //   image:
+    //     "https://github.com/vishalkumarojha/testimonials-section/blob/main/css/1724776881249.jpg?raw=true",
+    //   category: "AI/ML, Web Development",
+    //   technologies: ["React", "Python", "OpenAI API", "MongoDB"],
+    //   link: "#",
+    //   problem: "Job seekers struggle to create ATS-optimized resumes and find personalized career guidance.",
+    //   solution:
+    //     "Built an AI platform that analyzes resumes, suggests improvements, and provides customized career paths.",
+    //   result:
+    //     "Helped users improve their resume quality and receive tailored career advice based on their skills and interests.",
+    // },
+    // {
+    //   id: 3,
+    //   title: "RushX (E-commerce Website)",
+    //   description:
+    //     "RushX, an e-commerce website developed for the Build for Bharat competition. This project features an AI-powered chatbox that allows users to ask questions and receive instant assistance, significantly enhancing the shopping experience.",
+    //   image: "https://github.com/vishalkumarojha/testimonials-section/blob/main/css/intro.jpg?raw=true",
+    //   category: "Web Development",
+    //   technologies: ["Django", "Python", "JavaScript", "Bootstrap"],
+    //   link: "https://github.com/vishalkumarojha/E-commerce-RUSHX-",
+    //   problem:
+    //     "Traditional e-commerce platforms lack personalized customer support and intuitive shopping experiences.",
+    //   solution: "Created an e-commerce platform with an AI-powered chatbot to provide instant customer assistance.",
+    //   result: "Enhanced user experience with real-time support, leading to improved customer satisfaction.",
+    // },
   ]
 
   const openProjectModal = (project: Project) => {

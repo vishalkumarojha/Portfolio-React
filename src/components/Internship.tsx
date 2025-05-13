@@ -18,8 +18,8 @@ const Internship: React.FC = () => {
       id: 1,
       company: "University Club's Lead Position",
       logo: "https://github.com/vishalkumarojha/ArnoCodes/blob/main/src/assets/notion_vit_logo.jpg?raw=true",
-      position: "Lead@NotionCommunityVITB , Co-Lead @E-cell",
-      department: "Former Tech, Ceative , operations and Events team Lead",
+      position: "President@NotionCommunityVITB , Co-Lead @E-cell",
+      department: "Former's Tech, Ceative , operations and Events team Lead",
       period: "Dec 2023 - Present",
       type: "Full-time",
       location: "VIT Bhopal University",
@@ -62,7 +62,7 @@ const Internship: React.FC = () => {
 
   const handleDownloadResume = () => {
     // Replace with your Google Drive link
-    const resumeUrl = "https://drive.google.com/file/d/14wxPujnXBn3EmS0Fs3aSnF9dvT_ymNii/view?usp=sharing"
+    const resumeUrl = "https://drive.google.com/file/d/1dSs2lv0cPrguWWaP_ae__Vd5TxEstPxt/view?usp=sharing"
     window.open(resumeUrl, "_blank")
   }
 

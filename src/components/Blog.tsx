@@ -19,7 +19,7 @@ const Blog: React.FC = () => {
         "eeded to store data in key-value pairs? That’s where the Map object in TypeScript",
       date: "Feb. 15, 2025",
       category: "Development",
-      image: "https://github.com/vishalkumarojha/testimonials-section/blob/main/css/Screenshot%202025-03-23%20144604.png?raw=true",
+      image: "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/Screenshot%202025-03-23%20144604.png?raw=true",
       link: "https://www.arnocodes.in/blog",
     },
     {
@@ -28,7 +28,7 @@ const Blog: React.FC = () => {
       excerpt: "tore multiple values of the same type in a single variable? That's where arrays come in! In Java, an array lets you store and manage a collection of elements efficiently.",
       date: "February 14, 2025",
       category: "Java programming",
-      image: "https://github.com/vishalkumarojha/testimonials-section/blob/main/css/Screenshot%202025-03-23%20144604.png?raw=true",
+      image: "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/Screenshot%202025-03-23%20144604.png?raw=true",
       link: "https://www.arnocodes.in/blog",
     },
     {
@@ -37,7 +37,7 @@ const Blog: React.FC = () => {
       excerpt: "Searching for an element in a collection can sometimes feel like finding a needle in a haystack, but not with Binary Search!",
       date: "Feb. 12, 2025",
       category: "TypeScript Programming",
-      image: "https://github.com/vishalkumarojha/testimonials-section/blob/main/css/Screenshot%202025-03-23%20144604.png?raw=true",
+      image: "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/Screenshot%202025-03-23%20144604.png?raw=true",
       link: "https://www.arnocodes.in/blog",
     },
   ]

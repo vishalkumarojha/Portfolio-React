@@ -3,37 +3,37 @@ import type React from "react"
 const About: React.FC = () => {
   const photoGrid = [
     {
-      src: "https://raw.githubusercontent.com/vishalkumarojha/Portfolio--VishalOjha/refs/heads/main/img/InFrame_1729593012817.jpg",
+      src: "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/InFrame_1729593012817%20(1).jpg?raw=true",
       alt: "Vishal at a hackathon",
       className: "col-span-2 row-span-2",
     },
     {
-      src: "https://github.com/vishalkumarojha/Portfolio--VishalOjha/blob/main/img/WhatsApp%20Image%202025-03-23%20at%2013.26.17.jpeg?raw=true",
+      src: "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/WhatsApp%20Image%202025-03-23%20at%2013.26.17%20(2).jpeg?raw=true",
       alt: "Team collaboration",
       className: "col-span-1 row-span-1",
     },
     {
-      src: "https://raw.githubusercontent.com/vishalkumarojha/Portfolio--VishalOjha/refs/heads/main/img/InFrame_1729593044138.jpg",
+      src: "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/InFrame_1729593044138%20(1).jpg?raw=true",
       alt: "Working on laptop",
       className: "col-span-1 row-span-1",
     },
     {
-      src: "https://github.com/vishalkumarojha/Portfolio--VishalOjha/blob/main/img/WhatsApp%20Image%202025-03-23%20at%2011.09.17.jpeg?raw=true",
+      src: "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/WhatsApp%20Image%202025-03-23%20at%2011.09.17%20(1).jpeg?raw=true",
       alt: "At a tech conference",
       className: "col-span-1 row-span-1",
     },
     {
-      src: "https://github.com/vishalkumarojha/photo-gallary/blob/main/evolve/WhatsApp%20Image%202025-03-23%20at%2022.52.33.jpeg?raw=true",
+      src: "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/WhatsApp%20Image%202025-03-23%20at%2022.52.33.jpeg?raw=true",
       alt: "Coding session",
       className: "col-span-1 row-span-1",
     },
     {
-      src: "https://github.com/vishalkumarojha/Portfolio--VishalOjha/blob/main/img/WhatsApp%20Image%202025-03-23%20at%2011.03.18.jpeg?raw=true",
+      src: "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/WhatsApp%20Image%202025-03-23%20at%2011.03.18%20(1).jpeg?raw=true",
       alt: "Team meeting",
       className: "col-span-2 row-span-1",
     },
     {
-      src: "https://github.com/vishalkumarojha/Portfolio--VishalOjha/blob/main/img/WhatsApp%20Image%202025-03-23%20at%2011.03.51.jpeg?raw=true",
+      src: "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/WhatsApp%20Image%202025-03-23%20at%2011.03.51%20(1).jpeg?raw=true",
       alt: "Team meeting",
       className: "col-span-2 row-span-1",
     },

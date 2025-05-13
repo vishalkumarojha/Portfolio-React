@@ -21,6 +21,42 @@ const Certification: React.FC = () => {
   const certifications: Certification[] = [
     {
       id: 1,
+      title: "Software Engineer Intern",
+      issuer: "HackerRank",
+      date: "April 2025",
+      credentialId: "532db4bc7aca",
+      link: "https://www.hackerrank.com/certificates/532db4bc7aca",
+      image: "/placeholder.svg?height=800&width=1200",
+    },
+    {
+      id: 2,
+      title: "Blockchain and its Applications",
+      issuer: "NPTEL",
+      date: "May 2025",
+      credentialId: "NPTEL25CS08S559800139",
+      link: "https://drive.google.com/drive/folders/12T7ivHL2kSXeIIRqnxPhiVM8DAjtOedN",
+      image: "/placeholder.svg?height=800&width=1200",
+    },
+    {
+      id: 3,
+      title: "Software Engineer",
+      issuer: "HackerRank",
+      date: "April 2025",
+      credentialId: "9e5ba78d1285",
+      link: "https://www.hackerrank.com/certificates/iframe/9e5ba78d1285",
+      image: "/placeholder.svg?height=800&width=1200",
+    },
+    {
+      id: 4,
+      title: "Data Analysis with Python",
+      issuer: "FreeCodeCamp",
+      date: "April 2025",
+      credentialId: "vishalojha628-dawp",
+      link: "https://www.freecodecamp.org/certification/VishalOjha628/data-analysis-with-python-v7",
+      image: "/placeholder.svg?height=800&width=1200",
+    },
+    {
+      id: 5,
       title: "Postman API Fundamentals Student Expert",
       issuer: "Canvas Credentials (Badgr)",
       date: "August 2024",
@@ -29,7 +65,7 @@ const Certification: React.FC = () => {
       image: "/placeholder.svg?height=800&width=1200",
     },
     {
-      id: 2,
+      id: 6,
       title: "Front End Development Libraries",
       issuer: "FreeCodeCamp",
       date: "July 2024",
@@ -38,7 +74,7 @@ const Certification: React.FC = () => {
       image: "/placeholder.svg?height=800&width=1200",
     },
     {
-      id: 3,
+      id: 7,
       title: "Introduction to Android Mobile Application Development ",
       issuer: "Meta",
       date: "June 2024",
@@ -46,17 +82,17 @@ const Certification: React.FC = () => {
       link: "https://www.coursera.org/account/accomplishments/records/AQJ82UW6D83F",
       image: "/placeholder.svg?height=800&width=1200",
     },
+    // {
+    //   id: 8,
+    //   title: "Project-Based Learning: Build an AI Text Summarizer app",
+    //   issuer: "Postman",
+    //   date: "Aug 2024",
+    //   credentialId: null,
+    //   link: "http://verify.skilljar.com/c/3krc5o2c2ssd",
+    //   image: "/placeholder.svg?height=800&width=1200",
+    // },
     {
-      id: 4,
-      title: "Project-Based Learning: Build an AI Text Summarizer app",
-      issuer: "Postman",
-      date: "Aug 2024",
-      credentialId: null,
-      link: "http://verify.skilljar.com/c/3krc5o2c2ssd",
-      image: "/placeholder.svg?height=800&width=1200",
-    },
-    {
-      id: 5,
+      id: 9,
       title: "Java",
       issuer: "HackerRank",
       date: "June 2024",
@@ -65,7 +101,7 @@ const Certification: React.FC = () => {
       image: "/placeholder.svg?height=800&width=1200",
     },
     {
-      id: 6,
+      id: 10,
       title: "JavaScript (Intermediate)",
       issuer: "HackerRank",
       date: "June 2024",
@@ -74,7 +110,7 @@ const Certification: React.FC = () => {
       image: "/placeholder.svg?height=800&width=1200",
     },
     {
-      id: 7,
+      id: 11,
       title: "Problem Solving (Intermediate)",
       issuer: "HackerRank",
       date: "June 2024",
@@ -83,7 +119,7 @@ const Certification: React.FC = () => {
       image: "/placeholder.svg?height=800&width=1200",
     },
     {
-      id: 8,
+      id: 12,
       title: "React",
       issuer: "HackerRank",
       date: "June 2024",
@@ -164,7 +200,7 @@ const Certification: React.FC = () => {
       image: "/placeholder.svg?height=800&width=1200",
     },
     {
-      id: 9,
+      id: 21,
       title: "Responsive Web Design",
       issuer: "FreeCodeCamp",
       date: "June 2024",
@@ -173,7 +209,7 @@ const Certification: React.FC = () => {
       image: "/placeholder.svg?height=800&width=1200",
     },
     {
-      id: 10,
+      id: 22,
       title: "Version control with Git",
       issuer: "Microsoft",
       date: "June 2024",
@@ -182,7 +218,7 @@ const Certification: React.FC = () => {
       image: "/placeholder.svg?height=800&width=1200",
     },
     {
-      id: 11,
+      id: 23,
       title: "Tailwind CSS Mega Course",
       issuer: "Udemy",
       date: "June 2024",
@@ -191,7 +227,7 @@ const Certification: React.FC = () => {
       image: "/placeholder.svg?height=800&width=1200",
     },
     {
-      id: 12,
+      id: 24,
       title: "Bootstrap 5 Course",
       issuer: "Udemy",
       date: "June 2024",
@@ -200,14 +236,15 @@ const Certification: React.FC = () => {
       image: "/placeholder.svg?height=800&width=1200",
     },
     {
-      id: 21,
+      id: 25,
       title: "AWS Certified Advanced Netwrking - Speciality",
       issuer: "Udemy",
       date: "June 2024",
       credentialId: "UC-b6fe4c60-d6f1-4d95-8c59-49d1af9c958",
       link: "ude.my/UC-b6fe4c60-d6f1-4d95-8c59-49d1af9c9589",
       image: "/placeholder.svg?height=800&width=1200",
-    },
+    }
+    
   ]
 
   const itemsPerPage = 4

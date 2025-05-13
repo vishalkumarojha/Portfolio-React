@@ -4,6 +4,8 @@ import type React from "react"
 
 import { useState } from "react"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { collection, addDoc, serverTimestamp } from "firebase/firestore"
+import { db } from "../firebase"
 
 interface FormData {
   name: string
@@ -35,27 +37,15 @@ const Contact: React.FC = () => {
     setError("")
 
     try {
-      // Google Sheets API endpoint - updated to use the correct script URL
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzQb9c2Bm6sFJUzAG_QxfYVQHMA_4JQFtTZlmYWjTxNd8GprXJgfGi9uQ3j9Q2ydTQs/exec",
-        {
-          method: "POST",
-          mode: "no-cors", // Important for CORS issues with Google Scripts
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams({
-            name: formData.name,
-            email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-            timestamp: new Date().toISOString(),
-            form: "contact",
-          }).toString(),
-        },
-      )
+      // Add document to Firestore
+      await addDoc(collection(db, "contactSubmissions"), {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        timestamp: serverTimestamp(),
+      })
 
-      // Since no-cors doesn't return readable response, we assume success
       setSuccess(true)
       setFormData({
         name: "",
@@ -69,8 +59,8 @@ const Contact: React.FC = () => {
         setSuccess(false)
       }, 5000)
     } catch (err) {
+      console.error("Error submitting contact form:", err)
       setError("Failed to send message. Please try again.")
-      console.error("Contact form error:", err)
     } finally {
       setLoading(false)
     }
@@ -191,7 +181,7 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="text-sm font-medium text-gray-700">Email</h4>
                     <a
-                      href="mailto:work.vishalojha@gmail.com"
+                      href="mailto:hello@vishalkumarojha.com"
                       className="text-gray-600 hover:text-black transition-colors"
                     >
                       work.vishalojha@gmail.com
@@ -199,17 +189,17 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                {/* <div className="flex items-start">
                   <div className="bg-gray-100 p-3 rounded-full mr-4">
                     <Phone className="w-5 h-5 text-gray-700" />
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-700">Phone</h4>
                     <a href="tel:+919876543210" className="text-gray-600 hover:text-black transition-colors">
-                      +91 8948356580
+                      +91 
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start">
                   <div className="bg-gray-100 p-3 rounded-full mr-4">
@@ -224,7 +214,7 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="bg-white/80 p-8 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-6">Book a Meet</h3>
+              <h3 className="text-xl font-semibold mb-6">Book a Consultation</h3>
               <p className="text-gray-600 mb-4">
                 Want to discuss a project or get personalized advice? Book a one-on-one consultation with me through
                 Topmate.
@@ -246,4 +236,3 @@ const Contact: React.FC = () => {
 }
 
 export default Contact
-

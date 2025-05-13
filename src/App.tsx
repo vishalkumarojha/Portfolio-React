@@ -14,7 +14,6 @@ import Blog from "./components/Blog"
 import WhatIDo from "./components/WhatIDo"
 import Contribution from "./components/Contribution"
 import Newsletter from "./components/Newsletter"
-import Webslogs from "./components/Webslogs"
 import Contact from "./components/Contact"
 import Hobbies from "./components/Hobbies"
 import Footer from "./components/Footer"
@@ -41,7 +40,6 @@ const App: React.FC = () => {
           <Hobbies />
           <Contact />
           <Newsletter />
-          <Webslogs />
         </main>
         <Footer />
         <Analytics />

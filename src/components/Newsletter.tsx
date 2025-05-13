@@ -3,6 +3,8 @@
 import type React from "react"
 
 import { useState } from "react"
+import { collection, addDoc, serverTimestamp } from "firebase/firestore"
+import { db } from "../firebase"
 
 const Newsletter: React.FC = () => {
   const [email, setEmail] = useState("")
@@ -16,24 +18,12 @@ const Newsletter: React.FC = () => {
     setError("")
 
     try {
-      // Google Sheets API endpoint - updated to use the correct script URL
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzQb9c2Bm6sFJUzAG_QxfYVQHMA_4JQFtTZlmYWjTxNd8GprXJgfGi9uQ3j9Q2ydTQs/exec",
-        {
-          method: "POST",
-          mode: "no-cors", // Important for CORS issues with Google Scripts
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams({
-            email: email,
-            timestamp: new Date().toISOString(),
-            form: "newsletter",
-          }).toString(),
-        },
-      )
+      // Add document to Firestore
+      await addDoc(collection(db, "newsletterSubscriptions"), {
+        email: email,
+        timestamp: serverTimestamp(),
+      })
 
-      // Since no-cors doesn't return readable response, we assume success
       setSuccess(true)
       setEmail("")
 
@@ -94,4 +84,3 @@ const Newsletter: React.FC = () => {
 }
 
 export default Newsletter
-

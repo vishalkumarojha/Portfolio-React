@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
 
   const handleDownloadResume = () => {
     // Replace with your Google Drive link
-    const resumeUrl = "https://drive.google.com/file/d/14wxPujnXBn3EmS0Fs3aSnF9dvT_ymNii/view?usp=sharing"
+    const resumeUrl = "https://drive.google.com/file/d/1dSs2lv0cPrguWWaP_ae__Vd5TxEstPxt/view?usp=sharing"
     window.open(resumeUrl, "_blank")
   }
 
