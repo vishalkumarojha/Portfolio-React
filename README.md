@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+# 🌐 Vishal Ojha – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![GitHub Stars](https://img.shields.io/github/stars/vishalkumarojha/Portfolio-React?style=social)](https://github.com/vishalkumarojha/Portfolio-React/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Deploy on Vercel](https://img.shields.io/badge/Hosted%20on-Vercel-black?logo=vercel)](https://vishalojha628.vercel.app)
 
-Currently, two official plugins are available:
+Welcome to the repository of my **personal portfolio website**, designed and built to showcase my skills, projects, experience, and achievements as a full-stack developer. The site is built with cutting-edge technologies including **React**, **TypeScript**, **Vite**, **Tailwind CSS**, and **Firebase**, and it’s deployed on **Vercel** for lightning-fast performance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🔍 Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This portfolio serves as a digital representation of my professional journey, highlighting my capabilities, projects, certifications, internships, and blog posts. It is fully responsive, performant, and visually clean, aiming to provide an engaging user experience for visitors — whether potential clients, collaborators, or hiring managers.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Key highlights:
+- Designed with a modern, minimalist aesthetic using Tailwind CSS.
+- Responsive design compatible with all screen sizes.
+- Contact form integrated with Firebase Firestore to handle real-time submissions.
+- Categorized project sections, certification highlights, and blog content.
+- Fully typed codebase with TypeScript for type safety and maintainability.
+- Built using Vite for rapid development and optimized builds.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Live Demo
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Check out the live version here:  
+🔗 **[https://vishalojha628.vercel.app/](https://vishalojha628.vercel.app/)**
+
+---
+
+## 🛠️ Tech Stack
+
+Here are the core technologies used in building this portfolio:
+
+| Technology       | Description |
+|------------------|-------------|
+| **React**        | Component-based UI library used for building dynamic and reusable components |
+| **Vite**         | Lightning-fast frontend build tool and development server for modern web projects |
+| **TypeScript**   | Typed superset of JavaScript enabling better tooling and error checking |
+| **Tailwind CSS** | Utility-first CSS framework for building responsive and beautiful user interfaces |
+| **Firebase**     | Backend-as-a-Service used here for form submission (via Firestore) and environment config |
+| **Vercel**       | Hosting platform for deploying the portfolio with continuous integration |
+
+---
+
+## ✨ Features
+
+- ✅ **Responsive UI** — Designed for mobile, tablet, and desktop screens.
+- 📁 **Projects Section** — Showcases key personal and collaborative projects with links and descriptions.
+- 🎓 **Certifications** — Highlights technical achievements and online credentials.
+- 🧑‍💻 **Internship Experience** — Summary of industry experience with real-world applications.
+- ✍️ **Blog Section** — Space for personal technical blogs or writing.
+- 📬 **Contact Form** — Built with Firebase integration for storing user messages in Firestore.
+- 🌐 **Deployed via Vercel** — Blazing-fast deployment and global CDN for optimal performance.
+
+---
+
+
