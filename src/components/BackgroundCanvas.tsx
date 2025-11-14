@@ -29,29 +29,20 @@ const BackgroundCanvas: React.FC = () => {
 
     window.addEventListener("resize", handleResize)
 
-    // Update canvas height when document height changes
-    const resizeObserver = new ResizeObserver(() => {
-      canvas.height = document.documentElement.scrollHeight
-    })
-
-    resizeObserver.observe(document.body)
-
     // Create gradient background
     const drawGradient = () => {
-      // Create gradient
       const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height)
-      gradient.addColorStop(0, "rgba(255, 250, 245, 0.8)") // Lighter beige
-      gradient.addColorStop(0.5, "rgba(255, 245, 240, 0.8)") // Lighter middle tone
-      gradient.addColorStop(1, "rgba(255, 235, 235, 0.8)") // Lighter pink
+      gradient.addColorStop(0, "rgba(255, 250, 245, 0.8)")
+      gradient.addColorStop(0.5, "rgba(255, 245, 240, 0.8)")
+      gradient.addColorStop(1, "rgba(255, 235, 235, 0.8)")
 
-      // Fill with gradient
       ctx.fillStyle = gradient
       ctx.fillRect(0, 0, canvas.width, canvas.height)
     }
 
-    // Particle properties
+    // Particle properties - REDUCED from 60 to 20
     const particlesArray: Particle[] = []
-    const numberOfParticles = 60 // Reduced number of particles
+    const numberOfParticles = 20
 
     class Particle {
       x: number
@@ -64,10 +55,10 @@ const BackgroundCanvas: React.FC = () => {
       constructor() {
         this.x = canvas ? Math.random() * canvas.width : 0
         this.y = canvas ? Math.random() * canvas.height : 0
-        this.size = Math.random() * 1.5 + 0.5 // Smaller particles
-        this.speedX = Math.random() * 0.2 - 0.1 // Slower movement
-        this.speedY = Math.random() * 0.2 - 0.1 // Slower movement
-        this.opacity = Math.random() * 0.3 + 0.1 // Lower opacity
+        this.size = Math.random() * 1 + 0.3
+        this.speedX = Math.random() * 0.1 - 0.05
+        this.speedY = Math.random() * 0.1 - 0.05
+        this.opacity = Math.random() * 0.2 + 0.05
       }
 
       update() {
@@ -100,9 +91,9 @@ const BackgroundCanvas: React.FC = () => {
 
     init()
 
-    // Connect particles with lines
+    // Connect particles with lines - OPTIMIZED: reduced max distance
     const connect = () => {
-      const maxDistance = 150
+      const maxDistance = 100 // Reduced from 150
       for (let a = 0; a < particlesArray.length; a++) {
         for (let b = a; b < particlesArray.length; b++) {
           const dx = particlesArray[a].x - particlesArray[b].x
@@ -111,8 +102,8 @@ const BackgroundCanvas: React.FC = () => {
 
           if (distance < maxDistance) {
             const opacity = 1 - distance / maxDistance
-            ctx.strokeStyle = `rgba(255, 180, 180, ${opacity * 0.15})`
-            ctx.lineWidth = 0.5
+            ctx.strokeStyle = `rgba(255, 180, 180, ${opacity * 0.1})`
+            ctx.lineWidth = 0.3 // Reduced line width
             ctx.beginPath()
             ctx.moveTo(particlesArray[a].x, particlesArray[a].y)
             ctx.lineTo(particlesArray[b].x, particlesArray[b].y)
@@ -122,30 +113,33 @@ const BackgroundCanvas: React.FC = () => {
       }
     }
 
-    // Animation loop
+    let animationFrameId: number
+    let lastDrawTime = 0
+    const framerate = 16 // Target 60fps but skip frames if needed
+
     const animate = () => {
-      // Clear canvas
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      const now = Date.now()
+      if (now - lastDrawTime >= framerate) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        drawGradient()
 
-      // Draw gradient background
-      drawGradient()
+        for (let i = 0; i < particlesArray.length; i++) {
+          particlesArray[i].update()
+          particlesArray[i].draw()
+        }
 
-      // Update and draw particles
-      for (let i = 0; i < particlesArray.length; i++) {
-        particlesArray[i].update()
-        particlesArray[i].draw()
+        connect()
+        lastDrawTime = now
       }
 
-      connect()
-
-      requestAnimationFrame(animate)
+      animationFrameId = requestAnimationFrame(animate)
     }
 
     animate()
 
     return () => {
       window.removeEventListener("resize", handleResize)
-      resizeObserver.disconnect()
+      cancelAnimationFrame(animationFrameId)
     }
   }, [])
 
@@ -153,4 +147,3 @@ const BackgroundCanvas: React.FC = () => {
 }
 
 export default BackgroundCanvas
-

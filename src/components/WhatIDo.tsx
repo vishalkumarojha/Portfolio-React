@@ -25,17 +25,17 @@ const WhatIDo: React.FC = () => {
     },
     {
       id: 3,
-      title: "UI/UX Design",
+      title: "AI M.L. & Data Science",
       description:
-        "Creating intuitive and visually appealing designs using Figma and Adobe XD, with a focus on user experience and accessibility.",
-      icon: "design",
+        "Developed intelligent solutions leveraging machine learning models, NLP, and data analysis to drive insight and automation in real-world applications.",
+      icon: "code",
     },
     {
       id: 4,
-      title: "Video Editing & Content Creation",
+      title: "Cybersecurity",
       description:
-        "Editing high-quality videos for YouTube, marketing, and social media using Premiere Pro, After Effects, and DaVinci Resolve.",
-      icon: "video",
+        "Explored cybersecurity frameworks, risk assessment strategies, and standards-driven security practices for robust threat defense and compliance.",
+      icon: "automation",
     },
     {
       id: 5,

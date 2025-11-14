@@ -12,6 +12,7 @@ interface Certification {
   credentialId: string | null
   link: string
   image: string
+  skills?: string[] // Added skills field to display associated skills
 }
 
 const Certification: React.FC = () => {
@@ -54,6 +55,7 @@ const Certification: React.FC = () => {
       credentialId: "vishalojha628-dawp",
       link: "https://www.freecodecamp.org/certification/VishalOjha628/data-analysis-with-python-v7",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["Python", "Data Analysis"],
     },
     {
       id: 5,
@@ -63,6 +65,7 @@ const Certification: React.FC = () => {
       credentialId: "66b3cc1496c27f332a3fb82d",
       link: "https://api.badgr.io/public/assertions/1l_ZTrgTTbeMAHqgWD4asg",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["API Development", "Postman"],
     },
     {
       id: 6,
@@ -72,33 +75,27 @@ const Certification: React.FC = () => {
       credentialId: "vishalojha628-fedl",
       link: "https://freecodecamp.org/certification/VishalOjha628/front-end-development-libraries",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["Frontend Development", "React", "JavaScript"],
     },
     {
       id: 7,
-      title: "Introduction to Android Mobile Application Development ",
+      title: "Introduction to Android Mobile Application Development",
       issuer: "Meta",
       date: "June 2024",
       credentialId: "AQJ82UW6D83F",
       link: "https://www.coursera.org/account/accomplishments/records/AQJ82UW6D83F",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["Android Development", "Java"],
     },
-    // {
-    //   id: 8,
-    //   title: "Project-Based Learning: Build an AI Text Summarizer app",
-    //   issuer: "Postman",
-    //   date: "Aug 2024",
-    //   credentialId: null,
-    //   link: "http://verify.skilljar.com/c/3krc5o2c2ssd",
-    //   image: "/placeholder.svg?height=800&width=1200",
-    // },
     {
       id: 9,
-      title: "Java",
+      title: "Java (Basic)",
       issuer: "HackerRank",
       date: "June 2024",
       credentialId: "5505406596E5",
       link: "https://www.hackerrank.com/certificates/5505406596e5",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["Java"],
     },
     {
       id: 10,
@@ -108,6 +105,7 @@ const Certification: React.FC = () => {
       credentialId: "E43737655AD7",
       link: "https://www.hackerrank.com/certificates/e43737655ad7",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["JavaScript"],
     },
     {
       id: 11,
@@ -117,24 +115,27 @@ const Certification: React.FC = () => {
       credentialId: "1309C3DFA0D7",
       link: "https://www.hackerrank.com/certificates/1309c3dfa0d7",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["Problem Solving"],
     },
     {
       id: 12,
-      title: "React",
+      title: "React (Basic)",
       issuer: "HackerRank",
       date: "June 2024",
       credentialId: "40550EC3A401",
       link: "https://www.hackerrank.com/certificates/40550ec3a401",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["React.js"],
     },
     {
       id: 13,
-      title: "SQL(Intermediate)",
+      title: "SQL (Intermediate)",
       issuer: "HackerRank",
       date: "June 2024",
       credentialId: "38F05BBE84A2",
       link: "https://www.hackerrank.com/certificates/38f05bbe84a2",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["SQL"],
     },
     {
       id: 14,
@@ -144,6 +145,7 @@ const Certification: React.FC = () => {
       credentialId: "E43737655AD7",
       link: "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=dedcd80b-77bf-4070-846e-ce673de62b27&",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["MATLAB"],
     },
     {
       id: 15,
@@ -153,6 +155,7 @@ const Certification: React.FC = () => {
       credentialId: "8af9f678ab",
       link: "https://vityarthi.com/certificate/8af9f678ab",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["Artificial Intelligence", "Machine Learning"],
     },
     {
       id: 16,
@@ -162,6 +165,7 @@ const Certification: React.FC = () => {
       credentialId: "c61887ff8c",
       link: "https://vityarthi.com/certificate/c61887ff8c",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["Python"],
     },
     {
       id: 17,
@@ -171,33 +175,37 @@ const Certification: React.FC = () => {
       credentialId: "MDBxlub2dcldf",
       link: "https://learn.mongodb.com/c/j8bXl68wTsu9aNGIkd9LWQ",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["MongoDB", "Java"],
     },
     {
       id: 18,
       title: "MongoDB Aggregation with Java",
       issuer: "MongoDB University",
-      date: "July 2024",
+      date: "June 2024",
       credentialId: "MDB4hma3kwnyc",
       link: "https://learn.mongodb.com/c/G61th1-FTymaX9C2lRtLFg",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["MongoDB", "Java"],
     },
     {
       id: 19,
       title: "MongoDB CRUD Operations in Java",
       issuer: "MongoDB University",
-      date: "July 2024",
+      date: "June 2024",
       credentialId: "MDBuy3xd8zfon",
       link: "https://learn.mongodb.com/c/zBP0Wvz5S2a9S6CpSw9z1g",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["MongoDB", "Java"],
     },
     {
       id: 20,
       title: "MongoDB and the Document Model",
       issuer: "MongoDB University",
-      date: "July 2024",
+      date: "June 2024",
       credentialId: "MDBmj3r8l8ia0",
       link: "https://learn.mongodb.com/c/zmLiG3gRTxGbhmQOmKVk4A",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["MongoDB"],
     },
     {
       id: 21,
@@ -207,6 +215,7 @@ const Certification: React.FC = () => {
       credentialId: "vishalojha628-rwd",
       link: "https://freecodecamp.org/certification/vishalojha628/responsive-web-design",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["Web Development", "CSS"],
     },
     {
       id: 22,
@@ -216,6 +225,7 @@ const Certification: React.FC = () => {
       credentialId: "ML-234567",
       link: "https://learn.microsoft.com/en-us/users/vishalkumarojha-4606/achievements/print/9fbtvfpu?username=VishalKumarOjha-4606&section=activity&tab=tab-learning-paths",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["Git", "GitHub"],
     },
     {
       id: 23,
@@ -225,6 +235,7 @@ const Certification: React.FC = () => {
       credentialId: null,
       link: "https://www.udemy.com/certificate/UC-56ee60f4-6a27-4a0a-b208-fbfd56d42315/",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["CSS", "Tailwind CSS"],
     },
     {
       id: 24,
@@ -234,17 +245,18 @@ const Certification: React.FC = () => {
       credentialId: null,
       link: "https://www.udemy.com/certificate/UC-06c126bc-a55c-4d20-8f0e-7f53fc5ab1a7/",
       image: "/placeholder.svg?height=800&width=1200",
+      skills: ["Bootstrap 5"],
     },
     {
       id: 25,
-      title: "AWS Certified Advanced Netwrking - Speciality",
+      title: "AWS Certified Advanced Networking - Speciality",
       issuer: "Udemy",
       date: "June 2024",
       credentialId: "UC-b6fe4c60-d6f1-4d95-8c59-49d1af9c958",
       link: "ude.my/UC-b6fe4c60-d6f1-4d95-8c59-49d1af9c9589",
       image: "/placeholder.svg?height=800&width=1200",
-    }
-    
+      skills: ["AWS", "Networking"],
+    },
   ]
 
   const itemsPerPage = 4
@@ -272,7 +284,9 @@ const Certification: React.FC = () => {
     <section id="certification" className="py-16 bg-white/80 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-2 text-center">Certifications</h2>
-        <p className="text-gray-500 mb-8 text-center">This Contains some of my professional certifications and credentials</p>
+        <p className="text-gray-500 mb-8 text-center">
+          This Contains some of my professional certifications and credentials
+        </p>
 
         <div className="relative">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -285,15 +299,32 @@ const Certification: React.FC = () => {
                   <h3 className="text-lg font-semibold mb-2">{cert.title}</h3>
                   <p className="text-gray-600 mb-1">{cert.issuer}</p>
                   <p className="text-sm text-gray-500 mb-1">Issued: {cert.date}</p>
-                  <p className="text-sm text-gray-500">Credential ID: {cert.credentialId}</p>
+                  {cert.credentialId && (
+                    <p className="text-sm text-gray-500 mb-3">Credential ID: {cert.credentialId}</p>
+                  )}
+
+                  {cert.skills && cert.skills.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {cert.skills.map((skill, index) => (
+                        <span
+                          key={index}
+                          className="inline-block px-3 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 <div className="mt-4">
-                  {/* <button
-                    onClick={() => openCertificateModal(cert)}
-                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
                   >
                     View Certificate
-                  </button> */}
+                  </a>
                 </div>
               </div>
             ))}
@@ -354,7 +385,7 @@ const Certification: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Credential ID:</p>
-                    <p className="text-gray-600">{selectedCertificate.credentialId}</p>
+                    <p className="text-gray-600">{selectedCertificate.credentialId || "N/A"}</p>
                   </div>
                   <div>
                     <p className="font-semibold">Verification Link:</p>
@@ -368,6 +399,22 @@ const Certification: React.FC = () => {
                     </a>
                   </div>
                 </div>
+
+                {selectedCertificate.skills && selectedCertificate.skills.length > 0 && (
+                  <div className="mt-6 pt-6 border-t">
+                    <p className="font-semibold mb-3">Skills:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedCertificate.skills.map((skill, index) => (
+                        <span
+                          key={index}
+                          className="inline-block px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -378,4 +425,3 @@ const Certification: React.FC = () => {
 }
 
 export default Certification
-

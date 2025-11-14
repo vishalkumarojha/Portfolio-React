@@ -3,8 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
-import { Menu, X, Home, Info, Users, Image, HelpCircle, Briefcase, Award, BookOpen, Code, Mail } from "lucide-react"
+import { Menu, X, Home, Info, Users, ImageIcon, HelpCircle, Briefcase, Award, BookOpen, Code, Mail } from "lucide-react"
 import SocialModal from "./SocialModal"
 
 const Navbar: React.FC = () => {
@@ -42,13 +41,13 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: "Home", href: "#home", icon: <Home className="h-5 w-5" /> },
-    { name: "About", href: "#about", icon: <Info className="h-5 w-5" /> },
+    // { name: "About", href: "#about", icon: <Info className="h-5 w-5" /> },
     { name: "Skills", href: "#skills", icon: <Code className="h-5 w-5" /> },
     { name: "Projects", href: "#projects", icon: <Briefcase className="h-5 w-5" /> },
     { name: "Achievements", href: "#achievements", icon: <Award className="h-5 w-5" /> },
     { name: "Education", href: "#education", icon: <BookOpen className="h-5 w-5" /> },
     { name: "Experience", href: "#internship", icon: <Users className="h-5 w-5" /> },
-    { name: "Gallery", href: "#about", icon: <Image className="h-5 w-5" /> },
+    { name: "Gallery", href: "#about", icon: <ImageIcon className="h-5 w-5" /> },
     { name: "Contact", href: "#contact", icon: <Mail className="h-5 w-5" /> },
     { name: "FAQ", href: "#certification", icon: <HelpCircle className="h-5 w-5" /> },
   ]
@@ -60,10 +59,10 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="flex flex-col">
+        <a href="#home" className="flex flex-col">
           <span className="text-lg font-semibold">Vishal Kumar Ojha</span>
           <span className="text-sm text-gray-500">Student | Developer</span>
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex space-x-8">
@@ -148,4 +147,3 @@ const Navbar: React.FC = () => {
 }
 
 export default Navbar
-

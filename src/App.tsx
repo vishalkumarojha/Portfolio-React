@@ -1,5 +1,4 @@
 import type React from "react"
-import { BrowserRouter as Router } from "react-router-dom"
 import { Analytics } from "@vercel/analytics/react"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
@@ -10,6 +9,7 @@ import Projects from "./components/Projects"
 import Achievements from "./components/Achievements"
 import Internship from "./components/Internship"
 import Certification from "./components/Certification"
+import Publications from "./components/Publications"
 import Blog from "./components/Blog"
 import WhatIDo from "./components/WhatIDo"
 import Contribution from "./components/Contribution"
@@ -21,32 +21,30 @@ import BackgroundCanvas from "./components/BackgroundCanvas"
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col relative">
-        <BackgroundCanvas />
-        <Navbar />
-        <main className="flex-grow">
-          <Hero />
-          <About />
-          <Education />
-          <Skills />
-          <Projects />
-          <Achievements />
-          <Internship />
-          <Certification />
-          <Blog />
-          <WhatIDo />
-          <Contribution />
-          <Hobbies />
-          <Contact />
-          <Newsletter />
-        </main>
-        <Footer />
-        <Analytics />
-      </div>
-    </Router>
+    <div className="min-h-screen flex flex-col relative">
+      <BackgroundCanvas />
+      <Navbar />
+      <main className="flex-grow">
+        <Hero />
+        {/* <About /> */}
+        <Education />
+        <Skills />
+        <Projects />
+        <Achievements />
+        <Internship />
+        <Certification />
+        <Publications />
+        {/* <Blog /> */}
+        <WhatIDo />
+        {/* <Contribution /> */}
+        {/* <Hobbies /> */}
+        <Contact />
+        <Newsletter />
+      </main>
+      <Footer />
+      <Analytics />
+    </div>
   )
 }
 
 export default App
-
