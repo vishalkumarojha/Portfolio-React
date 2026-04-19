@@ -1,0 +1,868 @@
+{
+  "personal_info": {
+    "name": "Vishal Kumar Ojha",
+    "tagline": "Student | Developer",
+    "roles": [
+      "Community@Notion",
+      "Cybersecurity",
+      "Web & Android Developer",
+      "A.I. & M.L.",
+      "Competitive Programmer",
+      "Technical Content Writer",
+      "B.Tech CSE VITB'27"
+    ],
+    "about_texts": [
+      "Hey, I'm Vishal Kumar Ojha, a pre final-year student at VIT Bhopal University, passionate about building impactful full-stack web applications and AI-driven solutions. As the developer and contributor to various academic research projects, I specialize in full-stack development using React.js, Node.js, and Python, alongside machine learning and cloud technologies like AWS.",
+      "Beyond coding, I actively engage in research, presenting papers at conferences, and exploring areas like cybersecurity and healthcare technology. I have practical experience in automation, NLP models, and leading tech initiatives within my academic and startup ventures.",
+      "I am always eager to learn, innovate, and collaborate on challenging projects. Whether building scalable software, deploying cloud solutions, or researching AI applications, I strive to push boundaries and create meaningful impact. Let's connect and build remarkable technology together!"
+    ],
+    "stats": [
+      {
+        "value": "4+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "50+",
+        "label": "Projects Completed"
+      },
+      {
+        "value": "20+",
+        "label": "Happy Clients"
+      }
+    ],
+    "resume_url": "https://docs.google.com/document/d/1_WsSxoErTPy1zxKIKGM_q614iUaUS__iiQT5nP4PtN8/edit?usp=sharing",
+    "photos": [
+      "/picture.jpeg",
+      "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/WhatsApp%20Image%202025-03-23%20at%2013.26.17%20(2).jpeg?raw=true",
+      "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/InFrame_1729593044138%20(1).jpg?raw=true",
+      "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/WhatsApp%20Image%202025-03-23%20at%2011.09.17%20(1).jpeg?raw=true",
+      "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/WhatsApp%20Image%202025-03-23%20at%2022.52.33.jpeg?raw=true",
+      "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/WhatsApp%20Image%202025-03-23%20at%2011.03.18%20(1).jpeg?raw=true",
+      "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/WhatsApp%20Image%202025-03-23%20at%2011.03.51%20(1).jpeg?raw=true"
+    ]
+  },
+  "education": [
+    {
+      "degree": "B.Tech CSE (Specialization in Health Informatics)",
+      "institution": "VIT Bhopal University",
+      "location": "(Bhopal, Madhya Pradesh)",
+      "period": "2023 - Present",
+      "description": "I am currently a second-year student at VIT Bhopal University, pursuing a B.Tech. in Computer Science and Engineering with a specialization in Health Informatics. Throughout my 1st year, My Cumulative GPA is 9.4"
+    },
+    {
+      "degree": "NEET U.G. Preparation",
+      "institution": "Allen Career Institute",
+      "location": "Kota, Rajasthan",
+      "period": "2021 - 2023",
+      "description": "I dedicated my time to preparing for the NEET Examination. To achieve my goal, I enrolled in ALLEN Institute, Kota, where I was in their prestigious SRG Batch and achived 607/720 in the Exam."
+    }
+  ],
+  "projects": [
+    {
+      "title": "EaseOut",
+      "description": "EaseOut is an all-in-one smart productivity application designed to simplify modern work life by combining task management, job application tracking, communication tools, and secure personal organization in one platform.",
+      "image": "/easeout.jpeg",
+      "category": "Productivity",
+      "technologies": [
+        "React Native",
+        "Node.js",
+        "Tailwind CSS",
+        "Appwrite"
+      ],
+      "link": "https://github.com/vishalkumarojha",
+      "problem": "Productivity apps commonly focus on fragmented workflows, making it hard to track jobs and tasks in one place.",
+      "solution": "Built a consolidated platform for task management, job tracking, and secure communication.",
+      "result": "Simplifies modern work life with a centralized smart productivity hub."
+    },
+    {
+      "title": "ArnoCodes",
+      "description": "A comprehensive 225-lesson Data Structures and Algorithms course covering 25 essential steps from basic programming to advanced topics, with in-depth lectures and lessons.",
+      "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=2128&auto=format&fit=crop",
+      "category": "Education",
+      "technologies": [
+        "React.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Node.js"
+      ],
+      "link": "https://github.com/vishalkumarojha",
+      "problem": "Lack of structured, step-by-step DSA learning paths for developers.",
+      "solution": "Developed a full-scale learning platform with 25 distinct modules and 225 detailed lessons.",
+      "result": "Empowers developers to master DSA through a structured, lecture-based approach."
+    },
+    {
+      "title": "ArnoX (Image to Speech Converter App)",
+      "description": "ArnoX is an image-to-speech narration app designed to assist visually impaired individuals. The app captures photos of objects, describes their appearance, recognizes written characters, and narrates them effectively.",
+      "image": "https://github.com/vishalkumarojha/Portfolio-React/blob/main/src/assets/drawer.png?raw=true",
+      "category": "App Development",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "Google ML Kit"
+      ],
+      "link": "https://github.com/vishalkumarojha/ArnoX",
+      "problem": "Visually impaired individuals face challenges in identifying objects and reading text in their environment.",
+      "solution": "Developed a mobile application that uses machine learning to identify objects and text in images, converting them to speech.",
+      "result": "Created an accessible tool that helps visually impaired users navigate their environment more independently.",
+      "collaboration": "Developed it during the University Project Exibition 1"
+    },
+    {
+      "title": "AdVITya’26: [ flagship Annual Techno-Cultural and sports fest of VITB University]",
+      "description": "The Website hosted 130+ Technical and Non-technical Events along with their registration,The Website has Key Highlights , Celebrity , organiser , guest speakers , listed along with a ticketing system",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAakBLxIbukhOWbrsVaD0gWGHZc5ja7XTgX87QTIJshZtZ2ZZ6_w0LdQf6V0da1oJTlVY&usqp=CAU?height=600&width=600",
+      "category": "Web Development",
+      "technologies": [
+        "React.js",
+        "Javascript",
+        "Appwrite",
+        "Typescript",
+        "Tailwind CSS"
+      ],
+      "link": "https://vitbhopal.ac.in/advitya2025/",
+      "problem": "AdVITya’25: [ flagship Annual Techno-Cultural and sports fest of VITB University] needed a website to host 130+ Technical and Non-technical Events along with their registration.",
+      "solution": "Built The Website hosted 130+ Technical and Non-technical Events along with their registration, The Website handled 600K request in 30 days consuming 550 GB of bandwidth ,The Website has Key Highlights , Celebrity , organiser , guest speakers , listed along with a ticketing system",
+      "result": "Website handled 600K request in 30 days consuming 550 GB of bandwidth,hosted 130+ Technical and Non-technical Events along with their registration,"
+    },
+    {
+      "title": "Farm-O-Help",
+      "description": "A mobile applications to help farmers to identify diesese of plants , improve its yield ,predict wheather , and rent tools cheaply available in the market",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbwQ_S2nvM5EUvF5zJfuavvdIOm9Ojebskgw&s?height=600&width=600",
+      "category": "Machine Learning",
+      "technologies": [
+        "Flutter",
+        "machine learning",
+        "Dart",
+        "Firebase",
+        "Kraggle dataset",
+        "Google Collab",
+        "Python"
+      ],
+      "link": "https://github.com/vishalkumarojha",
+      "problem": "Traditional it lacks an applications to help farmers to identify diesese of plants , improve its yield ,predict wheather , and rent tools cheaply available in the market",
+      "solution": "Developed a cross platform application identify diesese of plants , improve its yield ,predict wheather , and rent tools cheaply available in the market",
+      "result": "Its detect diseases , Provide tool rental facility and predict the soil and weather of the area .Features - Secured Authentication , Multilingual for efficient use, Smart connect , Weather"
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Liomonk Pvt Ltd",
+      "logo": "/liomonk-logo.png",
+      "position": "Co-Founder",
+      "department": "Founding Team",
+      "period": "Dec 2025 - Present",
+      "type": "Full-time",
+      "location": "Remote",
+      "mode": "Remote",
+      "description": "Building the future of AI-driven solutions and technical infrastructure."
+    },
+    {
+      "company": "VIT Bhopal University",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/c/cf/Vellore_Institute_of_Technology_seal_2017.svg",
+      "position": "Event Coordinator",
+      "department": "Health Hack Hackathon",
+      "period": "Jan 2025 - Feb 2025",
+      "type": "Part-time",
+      "location": "VIT Bhopal",
+      "mode": "On-site",
+      "description": "Coordinator at the Health Hackathon organized by VIT BHOPAL UNIVERSITY in collaboration with John Hopkins university and lead of Venue and Crowd management team.",
+      "certificate": "/health-hack-cert.png"
+    },
+    {
+      "company": "Notion",
+      "logo": "https://logo.clearbit.com/notion.so",
+      "position": "Community Manager",
+      "department": "Notion Community",
+      "period": "Sep 2025 - Present",
+      "type": "Part-time",
+      "location": "Remote",
+      "mode": "Remote",
+      "description": "To integrate technology, productivity, and collaboration for smarter learning and project execution."
+    },
+    {
+      "company": "Hindalco Industries Limited",
+      "logo": "https://logo.clearbit.com/hindalco.com",
+      "position": "Project Intern",
+      "department": "Summer Intern",
+      "period": "Jun 2025 - Jul 2025",
+      "type": "Part-time",
+      "location": "Remote",
+      "mode": "Remote",
+      "description": "To integrate technology, productivity, and collaboration for smarter learning and project execution."
+    },
+    {
+      "company": "scramble labs , Arno codes & Arno Labs",
+      "logo": "https://logo.clearbit.com/scramblelabs.com",
+      "position": "Founding Team",
+      "department": "Web & Android Development",
+      "period": "Aug 2025 - Present",
+      "type": "Part-time",
+      "location": "Remote",
+      "mode": "Remote"
+    },
+    {
+      "company": "Notion Community VIT Bhopal",
+      "logo": "https://logo.clearbit.com/notion.so",
+      "position": "Board Advisor",
+      "department": "Leadership",
+      "period": "Apr 2025 - Present",
+      "type": "Part-time",
+      "location": "VIT Bhopal",
+      "mode": "Hybrid",
+      "skills": [
+        "Team Building",
+        "Strategic Planning",
+        "Leadership"
+      ]
+    },
+    {
+      "company": "VIT Bhopal AI Innovators Hub",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/c/cf/Vellore_Institute_of_Technology_seal_2017.svg",
+      "position": "Project Collaborator",
+      "department": "AI & Innovation",
+      "period": "Jul 2025 - Sep 2025",
+      "type": "Part-time",
+      "location": "VIT Bhopal",
+      "mode": "On-site"
+    },
+    {
+      "company": "TheSmartBridge",
+      "logo": "https://logo.clearbit.com/thesmartbridge.com",
+      "position": "Virtual Internship Trainee – Salesforce Developer",
+      "department": "Salesforce Development",
+      "period": "May 2025 - Jul 2025",
+      "type": "Internship",
+      "location": "Remote",
+      "mode": "Remote",
+      "description": "Powered by Salesforce"
+    },
+    {
+      "company": "Pawzz Foundation",
+      "logo": "https://logo.clearbit.com/pawzz.org",
+      "position": "Graphic Designer",
+      "department": "Design",
+      "period": "May 2025 - Jun 2025",
+      "type": "Internship",
+      "location": "Remote",
+      "mode": "Remote"
+    },
+    {
+      "company": "buildspace",
+      "logo": "https://logo.clearbit.com/buildspace.so",
+      "position": "Member S5",
+      "department": "Community",
+      "period": "Jun 2024 - Aug 2024",
+      "type": "Part-time",
+      "location": "Remote",
+      "mode": "Remote"
+    },
+    {
+      "company": "Earth5R",
+      "logo": "https://logo.clearbit.com/earth5r.org",
+      "position": "Content Writer",
+      "department": "Content Creation",
+      "period": "Dec 2023 - Jan 2024",
+      "type": "Internship",
+      "location": "Remote",
+      "mode": "Remote",
+      "skills": [
+        "Web Content Writing",
+        "Content Development",
+        "Web Content Creation",
+        "Analytical Skills"
+      ]
+    },
+    {
+      "company": "Team Everest NGO",
+      "logo": "https://logo.clearbit.com/teameverest.ngo",
+      "position": "Content Writer",
+      "department": "Content Creation",
+      "period": "Nov 2023 - Dec 2023",
+      "type": "Internship",
+      "location": "Remote",
+      "mode": "Remote",
+      "skills": [
+        "Content Development",
+        "Web Content Creation",
+        "Web Content Writing"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Software Engineer Intern",
+      "issuer": "HackerRank",
+      "date": "April 2025",
+      "credentialId": "532db4bc7aca",
+      "link": "https://www.hackerrank.com/certificates/532db4bc7aca"
+    },
+    {
+      "title": "Blockchain and its Applications",
+      "issuer": "NPTEL",
+      "date": "May 2025",
+      "credentialId": "NPTEL25CS08S559800139",
+      "link": "https://drive.google.com/drive/folders/12T7ivHL2kSXeIIRqnxPhiVM8DAjtOedN"
+    },
+    {
+      "title": "Software Engineer",
+      "issuer": "HackerRank",
+      "date": "April 2025",
+      "credentialId": "9e5ba78d1285",
+      "link": "https://www.hackerrank.com/certificates/iframe/9e5ba78d1285"
+    },
+    {
+      "title": "Data Analysis with Python",
+      "issuer": "FreeCodeCamp",
+      "date": "April 2025",
+      "credentialId": "vishalojha628-dawp",
+      "link": "https://www.freecodecamp.org/certification/VishalOjha628/data-analysis-with-python-v7",
+      "skills": [
+        "Python",
+        "Data Analysis"
+      ]
+    },
+    {
+      "title": "Postman API Fundamentals Student Expert",
+      "issuer": "Canvas Credentials (Badgr)",
+      "date": "August 2024",
+      "credentialId": "66b3cc1496c27f332a3fb82d",
+      "link": "https://api.badgr.io/public/assertions/1l_ZTrgTTbeMAHqgWD4asg",
+      "skills": [
+        "API Development",
+        "Postman"
+      ]
+    },
+    {
+      "title": "Front End Development Libraries",
+      "issuer": "FreeCodeCamp",
+      "date": "July 2024",
+      "credentialId": "vishalojha628-fedl",
+      "link": "https://freecodecamp.org/certification/VishalOjha628/front-end-development-libraries",
+      "skills": [
+        "Frontend Development",
+        "React",
+        "JavaScript"
+      ]
+    },
+    {
+      "title": "Introduction to Android Mobile Application Development",
+      "issuer": "Meta",
+      "date": "June 2024",
+      "credentialId": "AQJ82UW6D83F",
+      "link": "https://www.coursera.org/account/accomplishments/records/AQJ82UW6D83F",
+      "skills": [
+        "Android Development",
+        "Java"
+      ]
+    },
+    {
+      "title": "Java (Basic)",
+      "issuer": "HackerRank",
+      "date": "June 2024",
+      "credentialId": "5505406596E5",
+      "link": "https://www.hackerrank.com/certificates/5505406596e5",
+      "skills": [
+        "Java"
+      ]
+    },
+    {
+      "title": "JavaScript (Intermediate)",
+      "issuer": "HackerRank",
+      "date": "June 2024",
+      "credentialId": "E43737655AD7",
+      "link": "https://www.hackerrank.com/certificates/e43737655ad7",
+      "skills": [
+        "JavaScript"
+      ]
+    },
+    {
+      "title": "Problem Solving (Intermediate)",
+      "issuer": "HackerRank",
+      "date": "June 2024",
+      "credentialId": "1309C3DFA0D7",
+      "link": "https://www.hackerrank.com/certificates/1309c3dfa0d7",
+      "skills": [
+        "Problem Solving"
+      ]
+    },
+    {
+      "title": "React (Basic)",
+      "issuer": "HackerRank",
+      "date": "June 2024",
+      "credentialId": "40550EC3A401",
+      "link": "https://www.hackerrank.com/certificates/40550ec3a401",
+      "skills": [
+        "React.js"
+      ]
+    },
+    {
+      "title": "SQL (Intermediate)",
+      "issuer": "HackerRank",
+      "date": "June 2024",
+      "credentialId": "38F05BBE84A2",
+      "link": "https://www.hackerrank.com/certificates/38f05bbe84a2",
+      "skills": [
+        "SQL"
+      ]
+    },
+    {
+      "title": "Matlab Onramp",
+      "issuer": "MathWorks",
+      "date": "August 2023",
+      "credentialId": "E43737655AD7",
+      "link": "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=dedcd80b-77bf-4070-846e-ce673de62b27&",
+      "skills": [
+        "MATLAB"
+      ]
+    },
+    {
+      "title": "Fundamentals of AI and ML",
+      "issuer": "Vityarthi",
+      "date": "April 2024",
+      "credentialId": "8af9f678ab",
+      "link": "https://vityarthi.com/certificate/8af9f678ab",
+      "skills": [
+        "Artificial Intelligence",
+        "Machine Learning"
+      ]
+    },
+    {
+      "title": "Python Essentials",
+      "issuer": "Vityarthi",
+      "date": "June 2024",
+      "credentialId": "c61887ff8c",
+      "link": "https://vityarthi.com/certificate/c61887ff8c",
+      "skills": [
+        "Python"
+      ]
+    },
+    {
+      "title": "Using MongoDB with Java",
+      "issuer": "MongoDB University",
+      "date": "July 2024",
+      "credentialId": "MDBxlub2dcldf",
+      "link": "https://learn.mongodb.com/c/j8bXl68wTsu9aNGIkd9LWQ",
+      "skills": [
+        "MongoDB",
+        "Java"
+      ]
+    },
+    {
+      "title": "MongoDB Aggregation with Java",
+      "issuer": "MongoDB University",
+      "date": "June 2024",
+      "credentialId": "MDB4hma3kwnyc",
+      "link": "https://learn.mongodb.com/c/G61th1-FTymaX9C2lRtLFg",
+      "skills": [
+        "MongoDB",
+        "Java"
+      ]
+    },
+    {
+      "title": "MongoDB CRUD Operations in Java",
+      "issuer": "MongoDB University",
+      "date": "June 2024",
+      "credentialId": "MDBuy3xd8zfon",
+      "link": "https://learn.mongodb.com/c/zBP0Wvz5S2a9S6CpSw9z1g",
+      "skills": [
+        "MongoDB",
+        "Java"
+      ]
+    },
+    {
+      "title": "MongoDB and the Document Model",
+      "issuer": "MongoDB University",
+      "date": "June 2024",
+      "credentialId": "MDBmj3r8l8ia0",
+      "link": "https://learn.mongodb.com/c/zmLiG3gRTxGbhmQOmKVk4A",
+      "skills": [
+        "MongoDB"
+      ]
+    },
+    {
+      "title": "Responsive Web Design",
+      "issuer": "FreeCodeCamp",
+      "date": "June 2024",
+      "credentialId": "vishalojha628-rwd",
+      "link": "https://freecodecamp.org/certification/vishalojha628/responsive-web-design",
+      "skills": [
+        "Web Development",
+        "CSS"
+      ]
+    },
+    {
+      "title": "Version control with Git",
+      "issuer": "Microsoft",
+      "date": "June 2024",
+      "credentialId": "ML-234567",
+      "link": "https://learn.microsoft.com/en-us/users/vishalkumarojha-4606/achievements/print/9fbtvfpu?username=VishalKumarOjha-4606&section=activity&tab=tab-learning-paths",
+      "skills": [
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
+      "title": "Tailwind CSS Mega Course",
+      "issuer": "Udemy",
+      "date": "June 2024",
+      "credentialId": null,
+      "link": "https://www.udemy.com/certificate/UC-56ee60f4-6a27-4a0a-b208-fbfd56d42315/",
+      "skills": [
+        "CSS",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "title": "Bootstrap 5 Course",
+      "issuer": "Udemy",
+      "date": "June 2024",
+      "credentialId": null,
+      "link": "https://www.udemy.com/certificate/UC-06c126bc-a55c-4d20-8f0e-7f53fc5ab1a7/",
+      "skills": [
+        "Bootstrap 5"
+      ]
+    },
+    {
+      "title": "AWS Certified Advanced Networking - Speciality",
+      "issuer": "Udemy",
+      "date": "June 2024",
+      "credentialId": "UC-b6fe4c60-d6f1-4d95-8c59-49d1af9c958",
+      "link": "ude.my/UC-b6fe4c60-d6f1-4d95-8c59-49d1af9c9589",
+      "skills": [
+        "AWS",
+        "Networking"
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Lead Event Coordinator - Health Hack '25",
+      "year": "2025",
+      "description": "Organized by VIT Bhopal University in collaboration with Johns Hopkins University. Led the Venue and Crowd management team.",
+      "certificate": "/health-hack-cert.png"
+    },
+    {
+      "title": "Technical Lead - AdVITya '26",
+      "year": "2026",
+      "description": "Leading the technical infrastructure and web development for the annual techno-cultural fest of VIT Bhopal University.",
+      "icon": "code"
+    },
+    {
+      "title": "Technical Lead - AdVITya '25",
+      "year": "2025",
+      "description": "Managed the flagship Annual Techno-Cultural and sports fest website, handling 600K+ requests and 550GB of bandwidth.",
+      "icon": "code"
+    },
+    {
+      "title": "3rd Place At the Coding-Ninjas Hackathon",
+      "year": "2024",
+      "description": "learned about DSA, Problem Solving And Web-DEV to solve them into the limited amount of Time",
+      "icon": "trophy"
+    },
+    {
+      "title": "Finalist In the Project-Expo in Industry Conclave , VITB",
+      "year": "2024",
+      "description": "Qualified to the final round of the Project-Expo with The project BuildRapo . learned About the AI, M.l., NLPs, LLM",
+      "icon": "award"
+    },
+    {
+      "title": "3X Hactoberfest Contributer",
+      "year": "2024",
+      "description": "I proudly received the 3xHacktoberfest goodies, celebrating my contributions to open-source projects during this collaborative initiative.",
+      "icon": "star"
+    },
+    {
+      "title": "8th Postion in the Buildathon Hackathon in Industry Conclave , VITB",
+      "year": "2024",
+      "description": "Got the 8th in the Buildathon Hackathon organized by the PreProdCorp during the industry Conclave-24 in the VIT Bhopal. Learned about the Automl, Docker, M.L., Cloud",
+      "icon": "mic"
+    }
+  ],
+  "publications": [
+    {
+      "title": "A Multimodal Narration System for Enhancing Accessibility for the Visually Impaired",
+      "authors": "Dr.Swagat samanyantara , Vishal Ojha , Mansi Kaushik , Abhishek Kumar , Rishav Mishra",
+      "journal": "International Conference on Cognitive, Green and Ubiquitous Computing (IC-CGU)",
+      "location": "C. V. Raman Global University , Bhubaneswar",
+      "date": "Nov. 2025",
+      "doi": "10.1109/IC-CGU67042.2025.11337992",
+      "link": "https://ieeexplore.ieee.org/document/11337992",
+      "description": "This paper presents Arnox, an AI-driven multi-modal image narration system that improves accessibility for visually impaired individuals by integrating Optical Character Recognition (OCR), image and video captioning, and Text-to-Speech (TTS) synthesis. The framework enables real-time narration of both textual and visual content through a mobile app, allowing users to receive descriptive audio feedback from images and videos, thereby enhancing digital inclusion and autonomy for users with visual impairments."
+    }
+  ],
+  "skills": [
+    {
+      "name": "C",
+      "category": "Programming Languages"
+    },
+    {
+      "name": "C++",
+      "category": "Programming Languages"
+    },
+    {
+      "name": "Java",
+      "category": "Programming Languages"
+    },
+    {
+      "name": "Python",
+      "category": "Programming Languages"
+    },
+    {
+      "name": "JavaScript",
+      "category": "Programming Languages"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Programming Languages"
+    },
+    {
+      "name": "HTML5",
+      "category": "Frontend Development"
+    },
+    {
+      "name": "CSS",
+      "category": "Frontend Development"
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "Frontend Development"
+    },
+    {
+      "name": "React.js",
+      "category": "Frontend Development"
+    },
+    {
+      "name": "Next.js",
+      "category": "Frontend Development"
+    },
+    {
+      "name": "Node.js",
+      "category": "Backend Development"
+    },
+    {
+      "name": "Express.js",
+      "category": "Backend Development"
+    },
+    {
+      "name": "Django",
+      "category": "Backend Development"
+    },
+    {
+      "name": "Flask",
+      "category": "Backend Development"
+    },
+    {
+      "name": "MongoDB",
+      "category": "Database Management"
+    },
+    {
+      "name": "MySQL",
+      "category": "Database Management"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Database Management"
+    },
+    {
+      "name": "Git",
+      "category": "DevOps & Deployment"
+    },
+    {
+      "name": "Github",
+      "category": "DevOps & Deployment"
+    },
+    {
+      "name": "Vercel",
+      "category": "DevOps & Deployment"
+    },
+    {
+      "name": "Flutter",
+      "category": "App Development"
+    },
+    {
+      "name": "React Native",
+      "category": "App Development"
+    },
+    {
+      "name": "Firebase",
+      "category": "Cloud & Hosting"
+    },
+    {
+      "name": "Appwrite",
+      "category": "Cloud & Hosting"
+    },
+    {
+      "name": "TensorFlow",
+      "category": "AI/ML & Data Science"
+    },
+    {
+      "name": "OpenCV",
+      "category": "AI/ML & Data Science"
+    },
+    {
+      "name": "Pandas",
+      "category": "AI/ML & Data Science"
+    },
+    {
+      "name": "NumPy",
+      "category": "AI/ML & Data Science"
+    },
+    {
+      "name": "Notion",
+      "category": "Productivity & Collaboration"
+    },
+    {
+      "name": "Canva",
+      "category": "Content Creation"
+    },
+    {
+      "name": "Adobe Premiere Pro",
+      "category": "Content Creation"
+    },
+    {
+      "name": "VS Code",
+      "category": "Development"
+    },
+    {
+      "name": "Figma",
+      "category": "UI/UX Design"
+    }
+  ],
+  "what_id_do": [
+    {
+      "title": "Website & Web App Development",
+      "description": "Building modern, responsive, and high-performance websites and web applications using React, Next.js, and Tailwind CSS."
+    },
+    {
+      "title": "Mobile App Development",
+      "description": "Developing cross-platform mobile applications with Flutter and React Native, ensuring seamless user experiences."
+    },
+    {
+      "title": "AI M.L. & Data Science",
+      "description": "Developed intelligent solutions leveraging machine learning models, NLP, and data analysis to drive insight and automation in real-world applications."
+    },
+    {
+      "title": "Cybersecurity",
+      "description": "Explored cybersecurity frameworks, risk assessment strategies, and standards-driven security practices for robust threat defense and compliance."
+    },
+    {
+      "title": "Technical Writing & Documentation",
+      "description": "Writing clear and well-structured technical blogs, guides, and documentation to simplify complex concepts."
+    },
+    {
+      "title": "Automation & Scripting",
+      "description": "Creating Python and JavaScript scripts to automate tasks, web scraping, data processing, and workflow optimization."
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Website Development & Custom Web Applications",
+      "description": "Designing and developing responsive, modern websites.Expertise in React, Next.js, Tailwind CSS, and other required web technologies. Developing dynamic, scalable, and API-integrated web apps."
+    },
+    {
+      "name": "Mobile App Development",
+      "description": "Building cross-platform mobile apps using Flutter and React Native. Creating smooth, user-friendly experiences optimized for performance."
+    },
+    {
+      "name": "Video Editing & Content Creation",
+      "description": "Editing videos for social media, marketing, and YouTube. Using tools like Adobe Premiere Pro, After Effects, and DaVinci Resolve"
+    },
+    {
+      "name": "Automation & Scripting",
+      "description": "Writing Python and JavaScript scripts for task automation. Web scraping, data processing, and workflow automation."
+    },
+    {
+      "name": "Technical Writing & Blogging",
+      "description": "Writing clear, engaging, and well-researched technical content. Creating blogs, documentation, and tutorials on tech-related topics."
+    },
+    {
+      "name": "UI/UX Design",
+      "description": "Crafting visually appealing and intuitive interfaces. Designing wireframes and prototypes using Figma"
+    }
+  ],
+  "contributions": [
+    {
+      "title": "Notion Community Website",
+      "description": "A community-driven website for sharing Notion Events and members of the Notion community.",
+      "stars": 13,
+      "forks": 5,
+      "link": "https://github.com/notion-vit"
+    },
+    {
+      "title": "Scramble Labs",
+      "description": "A collection of tools and utilities for developers for the notion templates to improve their productivity.",
+      "stars": 18,
+      "forks": 8,
+      "link": "http://scramblelabs.com/"
+    },
+    {
+      "title": "E-Cell Website",
+      "description": "A Website for the E-Cell of VIT Bhopal, to showcase the events and activities of the club.",
+      "stars": 12,
+      "forks": 6,
+      "link": "https://www.ecellvitbhopal.in/"
+    },
+    {
+      "title": "Community Jeopardy",
+      "description": "A community-driven website for playing Jeopardy during the club events and meetups.",
+      "stars": 13,
+      "forks": 5,
+      "link": "https://github.com/facebook/react/pulls?q=author%3Ausername"
+    }
+  ],
+  "social_links": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/vishalkumarojha"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/vishalkumarojha/"
+    },
+    {
+      "name": "X",
+      "url": "https://x.com/arno_dorien628"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/vishalojha628"
+    },
+    {
+      "name": "Topmate",
+      "url": "https://topmate.io/vishal_ojha10"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:work.vishalojha@gmail.com"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@arnodorien"
+    },
+    {
+      "name": "Hashnode",
+      "url": "https://vishalojha628.hashnode.dev/"
+    },
+    {
+      "name": "Leetcode",
+      "url": "https://leetcode.com/u/vishalojha892/"
+    },
+    {
+      "name": "GeekforGeek",
+      "url": "https://www.geeksforgeeks.org/user/vishalkumarojha/"
+    },
+    {
+      "name": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/users/me/?username=VishalKumarOjha-4606&section=activity&tab=tab-learning-paths&source=docs"
+    },
+    {
+      "name": "Unstop",
+      "url": "https://unstop.com/u/vishaojh6817"
+    }
+  ],
+  "contact_info": {
+    "email": "work.vishalojha@gmail.com",
+    "location": "VIT Bhopal University, Madhya Pradesh, India",
+    "topmate_link": "https://topmate.io/vishal_ojha10"
+  }
+}
