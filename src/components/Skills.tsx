@@ -1,118 +1,129 @@
-"use client"
+import { useRef, useState, type KeyboardEvent } from 'react'
+import { skillGroups } from '../lib/data'
+import { skillIconUrl } from '../lib/skillIcons'
+import Section from './ui/Section'
 
-import { useState } from "react"
-import portfolioData from '../portfolio_data.json';
+function SkillIcon({ name }: { name: string }) {
+  const [failed, setFailed] = useState(false)
+  const url = skillIconUrl(name)
 
-export default function Skills() {
-  // Extract unique categories and group them
-  const skillCategories = portfolioData.skills.reduce((acc, skill) => {
-    if (!acc[skill.category]) {
-      acc[skill.category] = [];
-    }
-    acc[skill.category].push(skill.name);
-    return acc;
-  }, {} as Record<string, string[]>);
-
-  const categories = Object.keys(skillCategories);
-  const [activeCategory, setActiveCategory] = useState(categories[0] || "");
-
-  const getIconUrl = (name: string) => {
-    const n = name.toLowerCase();
-    const mapping: Record<string, string> = {
-      'c': 'c',
-      'c++': 'cpp',
-      'java': 'java',
-      'python': 'py',
-      'javascript': 'js',
-      'typescript': 'ts',
-      'html5': 'html',
-      'css': 'css',
-      'tailwind css': 'tailwind',
-      'react.js': 'react',
-      'react native': 'react',
-      'next.js': 'nextjs',
-      'node.js': 'nodejs',
-      'express.js': 'express',
-      'django': 'django',
-      'flask': 'flask',
-      'mongodb': 'mongodb',
-      'mysql': 'mysql',
-      'postgresql': 'postgres',
-      'git': 'git',
-      'github': 'github',
-      'vercel': 'vercel',
-      'flutter': 'flutter',
-      'firebase': 'firebase',
-      'appwrite': 'appwrite',
-      'tensorflow': 'tensorflow',
-      'opencv': 'opencv',
-      'pandas': 'pandas',
-      'numpy': 'numpy',
-      'notion': 'notion',
-      'canva': 'canva',
-      'adobe premiere pro': 'pr',
-      'vs code': 'vscode',
-      'figma': 'figma'
-    };
-    
-    const slug = mapping[n];
-    return slug ? `https://skillicons.dev/icons?i=${slug}` : null;
-  };
+  if (!url || failed) {
+    return (
+      <span className="flex h-7 w-7 items-center justify-center bg-surface font-mono text-[11px] uppercase text-ink-mute">
+        {name.charAt(0)}
+      </span>
+    )
+  }
 
   return (
-    <section className="py-16 border-t border-gray-200">
-      <h2 className="text-3xl font-bold text-gray-900 mb-4">Tools and Stack</h2>
-      <p className="text-gray-600 mb-8">Frequently used technologies and platforms.</p>
+    <img
+      src={url}
+      alt=""
+      loading="lazy"
+      onError={() => setFailed(true)}
+      className="h-7 w-7 object-contain"
+    />
+  )
+}
 
-      {/* Category Tabs */}
-      <div className="flex flex-wrap gap-3 mb-12">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveCategory(category)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              activeCategory === category ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+export default function Skills() {
+  const [active, setActive] = useState(0)
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([])
+  const group = skillGroups[active]
 
-      {/* Skills Grid */}
-      {activeCategory && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories[activeCategory].map((skill) => {
-            const iconUrl = getIconUrl(skill);
+  const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    const last = skillGroups.length - 1
+    let next = active
+
+    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') next = active === last ? 0 : active + 1
+    else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') next = active === 0 ? last : active - 1
+    else if (event.key === 'Home') next = 0
+    else if (event.key === 'End') next = last
+    else return
+
+    event.preventDefault()
+    setActive(next)
+    tabRefs.current[next]?.focus()
+  }
+
+  return (
+    <Section
+      id="skills"
+      label="Skills & Expertise"
+      title="The stack I reach for."
+      lede="A working set of languages, frameworks and tools, grouped the way I actually use them."
+      action={<span className="eyebrow">{skillGroups.length} groups</span>}
+    >
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] lg:gap-16">
+        <div
+          role="tablist"
+          aria-label="Skill categories"
+          aria-orientation="vertical"
+          onKeyDown={onKeyDown}
+          className="-mx-5 flex gap-6 overflow-x-auto px-5 pb-2 sm:-mx-8 sm:px-8 lg:mx-0 lg:flex-col lg:gap-0 lg:overflow-visible lg:px-0 lg:pb-0"
+        >
+          {skillGroups.map((item, index) => {
+            const selected = index === active
             return (
-              <div
-                key={skill}
-                className="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors"
+              <button
+                key={item.category}
+                ref={(node) => {
+                  tabRefs.current[index] = node
+                }}
+                role="tab"
+                id={`skill-tab-${index}`}
+                aria-selected={selected}
+                aria-controls="skill-panel"
+                tabIndex={selected ? 0 : -1}
+                onClick={() => setActive(index)}
+                className={`group flex shrink-0 items-center gap-3 whitespace-nowrap border-b border-hairline py-3 text-left transition-colors lg:w-full lg:whitespace-normal lg:border-b-0 lg:border-t lg:first:border-t-0 ${
+                  selected ? 'text-ink' : 'text-ink-mute hover:text-ink'
+                }`}
               >
-                <div className="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center overflow-hidden">
-                  {iconUrl ? (
-                    <img 
-                      src={iconUrl} 
-                      alt={skill} 
-                      className="w-8 h-8 object-contain"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = 'none';
-                        (e.target as HTMLImageElement).parentElement!.innerHTML = `<span class="text-lg font-semibold text-gray-600">${skill.charAt(0)}</span>`;
-                      }}
-                    />
-                  ) : (
-                    <span className="text-lg font-semibold text-gray-600">{skill.charAt(0)}</span>
-                  )}
-                </div>
-                <div>
-                  <p className="font-medium text-gray-900">{skill}</p>
-                  <p className="text-xs text-gray-500">{activeCategory}</p>
-                </div>
-              </div>
-            );
+                <span
+                  className={`font-mono text-[10px] transition-colors ${
+                    selected ? 'text-ink' : 'text-ink-mute'
+                  }`}
+                >
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span className="flex-1 text-[14px] leading-snug">{item.category}</span>
+                <span className="hidden font-mono text-[10px] text-ink-mute lg:block">
+                  {String(item.items.length).padStart(2, '0')}
+                </span>
+              </button>
+            )
           })}
         </div>
-      )}
-    </section>
+
+        <div
+          id="skill-panel"
+          role="tabpanel"
+          aria-labelledby={`skill-tab-${active}`}
+          tabIndex={0}
+          className="border border-hairline bg-white p-6 sm:p-8 lg:p-10"
+        >
+          <div key={group.category} className="animate-panel">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-hairline pb-6">
+              <h3 className="text-xl font-semibold tracking-[-0.02em] text-ink sm:text-2xl">
+                {group.category}
+              </h3>
+              <span className="font-mono text-[10px] uppercase tracking-label text-ink-mute">
+                {group.items.length} {group.items.length === 1 ? 'technology' : 'technologies'}
+              </span>
+            </div>
+
+            <ul className="mt-8 grid grid-cols-2 gap-x-8 gap-y-7 sm:grid-cols-3 sm:gap-x-10">
+              {group.items.map((item) => (
+                <li key={item} className="flex items-center gap-3">
+                  <SkillIcon name={item} />
+                  <span className="text-[14px] leading-tight text-ink">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </Section>
   )
 }

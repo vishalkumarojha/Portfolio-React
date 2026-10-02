@@ -1,50 +1,73 @@
-import { useState } from 'react';
-import portfolioData from '../portfolio_data.json';
-import SocialModal from './SocialModal';
+import { useState } from 'react'
+import { contact, personal } from '../lib/data'
+import SocialModal from './SocialModal'
+
+const ROLE_LINES: string[][] = []
+for (let index = 0; index < personal.roles.length; index += 2) {
+  ROLE_LINES.push(personal.roles.slice(index, index + 2))
+}
 
 export default function Hero() {
-  const { name, roles, photos, resume_url } = portfolioData.personal_info;
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { name, photos, resume_url } = personal
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
-    <section className="text-center py-20 animate-fadeIn">
-      <div className="mb-8 flex justify-center">
-        <div className="relative">
-          <img
-            src={photos[0]}
-            alt="Profile"
-            className="w-32 h-32 rounded-full object-cover object-center border-4 border-white shadow-xl"
-          />
-          <div className="absolute -bottom-2 -right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-white"></div>
+    <section className="pb-14 pt-16 sm:pb-16 sm:pt-20 lg:pb-20 lg:pt-24">
+      <div className="animate-fadeIn lg:grid lg:grid-cols-[minmax(0,1fr)_17.5rem] lg:items-end lg:gap-[clamp(2.5rem,4vw,5rem)]">
+        <div className="lg:order-1">
+          <span className="eyebrow">Hero / Introduction</span>
+
+          <h1 className="display mt-7 text-[clamp(2.5rem,6.4vw,5.25rem)]">{name}</h1>
+
+          <p className="mt-7 max-w-[52ch] text-[clamp(1.05rem,1.9vw,1.35rem)] leading-[1.45] text-ink-soft">
+            {ROLE_LINES.map((line, index) => (
+              <span key={index} className="block">
+                {line.join(' • ')}
+              </span>
+            ))}
+          </p>
+
+          <p className="mt-8 inline-flex items-center gap-2 text-sm text-ink-mute">
+            <span className="text-base leading-none" aria-hidden="true">
+              📍
+            </span>
+            {contact.location}
+          </p>
+
+          <div className="mt-9 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+            <a
+              href={resume_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-auto inline-flex min-h-[2.75rem] w-full max-w-[16rem] items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-white transition-all duration-300 ease-editorial hover:bg-ink-soft sm:mx-0 sm:w-auto sm:max-w-none"
+            >
+              Download Resume
+            </a>
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
+              className="mx-auto inline-flex min-h-[2.75rem] w-full max-w-[16rem] items-center justify-center gap-2 rounded-full border border-hairline px-7 py-3.5 text-sm font-medium text-ink transition-all duration-300 ease-editorial hover:border-ink sm:mx-0 sm:w-auto sm:max-w-none"
+            >
+              Connect With Me
+            </button>
+          </div>
         </div>
-      </div>
 
-      <h1 className="text-5xl font-extrabold text-gray-900 mb-2 tracking-tight">{name}</h1>
-      <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-        {roles.join(" • ")}
-      </p>
-      
-      <div className="flex justify-center gap-4 mb-10">
-        <span className="flex items-center gap-2 text-gray-500 bg-gray-50 px-4 py-2 rounded-full text-sm font-medium border border-gray-100">
-          <span className="text-lg">📍</span> {portfolioData.contact_info.location}
-        </span>
-      </div>
-
-      <div className="flex flex-col sm:flex-row justify-center gap-4">
-        <a 
-          href={resume_url} 
-          target="_blank" 
-          rel="noreferrer"
-          className="px-8 py-4 bg-gray-900 text-white font-bold rounded-xl hover:bg-gray-800 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-gray-200"
-        >
-          Download Resume
-        </a>
-        <button 
-          onClick={() => setIsModalOpen(true)}
-          className="px-8 py-4 bg-white text-gray-900 font-bold rounded-xl border-2 border-gray-100 hover:border-gray-200 hover:bg-gray-50 transition-all hover:scale-105 active:scale-95 shadow-sm"
-        >
-          Connect With Me
-        </button>
+        <div className="mt-9 sm:mt-10 lg:order-2 lg:mt-0 lg:justify-self-end">
+          <div className="relative mx-auto w-32 sm:mx-0 sm:w-40 lg:w-full">
+            <img
+              src={photos[0]}
+              alt={`${name}`}
+              className="aspect-[4/5] w-full rounded-2xl border border-hairline object-cover object-top shadow-xl"
+            />
+            <span className="absolute -bottom-3 left-4 inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-3 py-1.5 shadow-sm">
+              <span className="h-2 w-2 rounded-full bg-green-500" />
+              <span className="font-mono text-[10px] uppercase tracking-label text-ink-mute">
+                Available
+              </span>
+            </span>
+          </div>
+        </div>
       </div>
 
       <SocialModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

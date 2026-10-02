@@ -1,52 +1,56 @@
-import portfolioData from '../portfolio_data.json';
-import { ArrowRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react'
+import { pad, publications } from '../lib/data'
+import Section from './ui/Section'
 
 export default function Publications() {
-  const { publications } = portfolioData;
-
   return (
-    <section className="py-20 border-t border-gray-100">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Publications</h2>
-        <p className="text-lg text-gray-500 max-w-2xl mx-auto font-medium">Research papers and published work</p>
-      </div>
+    <Section
+      id="publications"
+      label="Publications"
+      title="Research, published."
+      lede="Peer-reviewed work on assistive technology and multimodal accessibility."
+      action={<span className="eyebrow">{publications.length} paper</span>}
+    >
+      <ol className="border-t border-hairline">
+        {publications.map((publication, index) => (
+          <li key={publication.doi} className="border-b border-hairline py-8 lg:py-10">
+            <div className="grid gap-4 sm:grid-cols-[3rem_minmax(0,1fr)] sm:gap-10">
+              <p className="font-mono text-[10px] text-ink-mute">{pad(index)}</p>
+              <div className="min-w-0">
+                <h3 className="max-w-[46ch] text-[clamp(1.15rem,2.6vw,1.65rem)] font-medium leading-tight tracking-[-0.02em] text-ink">
+                  {publication.title}
+                </h3>
 
-      <div className="max-w-4xl mx-auto space-y-16">
-        {publications.map((pub, idx) => (
-          <div key={idx} className="relative group p-8 rounded-2xl border border-gray-100 hover:border-gray-200 transition-all bg-white hover:shadow-lg">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-gray-900 leading-snug group-hover:text-blue-600 transition-colors">
-                {pub.title}
-              </h3>
-
-              <div className="space-y-1 text-sm font-medium text-gray-600">
-                <p className="text-gray-900">{pub.authors}</p>
-                <p className="italic underline underline-offset-4 decoration-gray-200">
-                  {pub.journal}, {pub.location}
+                <p className="mt-5 max-w-[64ch] text-[14px] leading-relaxed text-ink-soft">
+                  {publication.authors}
                 </p>
-              </div>
+                <p className="mt-1 text-[14px] leading-relaxed text-ink-mute">
+                  {publication.journal} — {publication.location}
+                </p>
 
-              <p className="text-gray-500 text-base leading-relaxed max-w-3xl">
-                {pub.description}
-              </p>
+                <p className="mt-6 max-w-[68ch] text-[14px] leading-relaxed text-ink-soft">
+                  {publication.description}
+                </p>
 
-              <div className="flex flex-wrap items-center gap-6 pt-4">
-                <span className="text-xs font-bold text-gray-400 tracking-wider">
-                  DOI: {pub.doi}
-                </span>
-                <a 
-                  href={pub.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 bg-gray-50 text-gray-900 text-sm font-bold rounded-lg border border-gray-200 hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all active:scale-95 shadow-sm"
-                >
-                  Read Paper <ArrowRight className="w-4 h-4" />
-                </a>
+                <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4">
+                  <span className="font-mono text-[10px] uppercase tracking-label text-ink-mute">
+                    {publication.date} · DOI {publication.doi}
+                  </span>
+                  <a
+                    href={publication.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 border-b border-ink pb-1 text-[14px] font-medium text-ink"
+                  >
+                    Read publication
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
-    </section>
+      </ol>
+    </Section>
   )
 }

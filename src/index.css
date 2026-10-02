@@ -2,50 +2,152 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --nav-height: 4.5rem;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white text-ink font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-ink text-white;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ink ring-offset-2 ring-offset-white;
+  }
+
+  img {
+    @apply select-none;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[10px] uppercase tracking-label text-ink-mute sm:text-[11px];
+  }
+
+  .display {
+    @apply font-semibold leading-[1.02] tracking-[-0.03em];
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-3 py-1 text-xs text-ink-soft;
+  }
+
+  .rule {
+    @apply h-px w-full bg-hairline;
+  }
+
+  .role-panel {
+    container-type: inline-size;
+  }
+
+  .role-meta {
+    display: grid;
+    gap: 0.75rem 1.5rem;
+  }
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* The shared role meta row splits type and period onto opposite edges whenever
+   the panel is wide enough. The panel width depends on the page grid, not the
+   viewport, so this is keyed to the panel itself rather than to a screen
+   breakpoint. Shared by Experience and Activities & Leadership. */
+@container (min-width: 32rem) {
+  .role-meta {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  .role-meta-date {
+    text-align: right;
+  }
 }
 
-@keyframes fadeIn {
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .animate-panel {
+    animation: panel-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .animate-menu {
+    animation: menu-in 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .animate-fadeIn {
+    animation: fade-in 0.3s ease-in-out both;
+  }
+}
+
+@keyframes fade-in {
   from {
     opacity: 0;
     transform: translateY(-10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
-@keyframes scaleIn {
+@keyframes panel-in {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: none;
   }
 }
 
-.animate-fadeIn {
-  animation: fadeIn 0.3s ease-in-out;
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.animate-scaleIn {
-  animation: scaleIn 0.2s ease-out;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

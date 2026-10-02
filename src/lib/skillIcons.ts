@@ -1,0 +1,41 @@
+const ICONS: Record<string, string> = {
+  c: 'c',
+  'c++': 'cpp',
+  java: 'java',
+  python: 'py',
+  javascript: 'js',
+  typescript: 'ts',
+  html5: 'html',
+  css: 'css',
+  'tailwind css': 'tailwind',
+  'react.js': 'react',
+  'react native': 'react',
+  'next.js': 'nextjs',
+  'node.js': 'nodejs',
+  'express.js': 'express',
+  django: 'django',
+  flask: 'flask',
+  mongodb: 'mongodb',
+  mysql: 'mysql',
+  postgresql: 'postgres',
+  git: 'git',
+  github: 'github',
+  vercel: 'vercel',
+  flutter: 'flutter',
+  firebase: 'firebase',
+  appwrite: 'appwrite',
+  tensorflow: 'tensorflow',
+  opencv: 'opencv',
+  pandas: 'pandas',
+  numpy: 'numpy',
+  notion: 'notion',
+  canva: 'canva',
+  'adobe premiere pro': 'pr',
+  'vs code': 'vscode',
+  figma: 'figma',
+}
+
+export const skillIconUrl = (name: string) => {
+  const slug = ICONS[name.trim().toLowerCase()]
+  return slug ? `https://skillicons.dev/icons?i=${slug}` : null
+}

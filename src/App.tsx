@@ -1,89 +1,101 @@
-"use client"
+import { useCallback, useEffect, useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Skills from './components/Skills'
+import Experience from './components/Experience'
+import Activities from './components/Activities'
+import Projects from './components/Projects'
+import Education from './components/Education'
+import Publications from './components/Publications'
+import Achievements from './components/Achievements'
+import ProfileCard from './components/ProfileCard'
+import Footer from './components/Footer'
+import { NAV_OFFSET, SECTIONS } from './lib/nav'
 
-import type React from "react"
-import { useState, useEffect, useRef } from "react"
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import About from "./components/About"
-import Skills from "./components/Skills"
-import Projects from "./components/Projects"
-import Education from "./components/Education"
-import Experience from "./components/Experience"
-import Publications from "./components/Publications"
-import Achievements from "./components/Achievements"
-import Sidebar from "./components/Sidebar"
-import Footer from "./components/Footer"
-
-
-function App() {
-  const [showSidebar, setShowSidebar] = useState(false)
-  const [activeSection, setActiveSection] = useState("home")
-
-  const aboutRef = useRef<HTMLDivElement>(null)
-  const skillsRef = useRef<HTMLDivElement>(null)
-  const projectsRef = useRef<HTMLDivElement>(null)
-  const publicationsRef = useRef<HTMLDivElement>(null)
-  const achievementsRef = useRef<HTMLDivElement>(null)
-  const educationRef = useRef<HTMLDivElement>(null)
-  const experienceRef = useRef<HTMLDivElement>(null)
+export default function App() {
+  const [activeSection, setActiveSection] = useState(SECTIONS[0].id)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setShowSidebar(window.scrollY > 300)
+    let frame = 0
+
+    const update = () => {
+      frame = 0
+      const probe = window.scrollY + NAV_OFFSET + 32
+      let current = SECTIONS[0].id
+
+      for (const section of SECTIONS) {
+        const element = document.getElementById(section.id)
+        if (!element) continue
+        if (element.getBoundingClientRect().top + window.scrollY <= probe) current = section.id
+      }
+
+      const atBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4
+      if (atBottom) current = SECTIONS[SECTIONS.length - 1].id
+
+      setActiveSection(current)
     }
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    const onScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(update)
+    }
+
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      if (frame) window.cancelAnimationFrame(frame)
+    }
   }, [])
 
-  const scrollToSection = (sectionId: string) => {
-    setActiveSection(sectionId)
-    const refs: { [key: string]: React.RefObject<HTMLDivElement> } = {
-      about: aboutRef,
-      skills: skillsRef,
-      projects: projectsRef,
-      publications: publicationsRef,
-      achievements: achievementsRef,
-      education: educationRef,
-      experience: experienceRef,
-    }
+  const scrollToSection = useCallback((id: string) => {
+    const element = document.getElementById(id)
+    if (!element) return
 
-    if (refs[sectionId]?.current) {
-      refs[sectionId].current.scrollIntoView({ behavior: "smooth" })
-    }
-  }
+    const top = element.getBoundingClientRect().top + window.scrollY - NAV_OFFSET
+    window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' })
+    setActiveSection(id)
+  }, [])
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white">
       <Navbar activeSection={activeSection} onNavigate={scrollToSection} />
-      <main className="max-w-4xl mx-auto px-6 py-12">
+
+      <div className="mx-auto w-full max-w-shell px-5 sm:px-8 lg:px-10">
         <Hero />
-        <div ref={aboutRef}>
-          <About />
+
+        <div className="xl:grid xl:grid-cols-[minmax(0,1fr)_17.5rem] xl:gap-[clamp(3rem,5vw,5rem)]">
+          <main className="min-w-0">
+            <div className="pb-2 pt-9 xl:hidden">
+              <p className="eyebrow">Profile / Connect</p>
+              <div className="mt-5">
+                <ProfileCard />
+              </div>
+            </div>
+
+            <About />
+            <Publications />
+            <Skills />
+            <Experience />
+            <Activities />
+            <Projects />
+            <Education />
+            <Achievements />
+          </main>
+
+          <aside className="hidden xl:block xl:pt-32">
+            <div className="sticky top-24">
+              <ProfileCard />
+            </div>
+          </aside>
         </div>
-        <div ref={skillsRef}>
-          <Skills />
-        </div>
-        <div ref={projectsRef}>
-          <Projects />
-        </div>
-        <div ref={publicationsRef}>
-          <Publications />
-        </div>
-        <div ref={educationRef}>
-          <Education />
-        </div>
-        <div ref={experienceRef}>
-          <Experience />
-        </div>
-        <div ref={achievementsRef}>
-          <Achievements />
-        </div>
-      </main>
-      {showSidebar && <Sidebar />}
+      </div>
+
       <Footer />
     </div>
   )
 }
-
-export default App
