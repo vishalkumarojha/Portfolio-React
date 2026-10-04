@@ -3,13 +3,7 @@
     "name": "Vishal Kumar Ojha",
     "tagline": "Student | Developer",
     "roles": [
-      "Community@Notion",
-      "Cybersecurity",
-      "Web & Android Developer",
-      "A.I. & M.L.",
-      "Competitive Programmer",
-      "Technical Content Writer",
-      "B.Tech CSE VITB'27"
+      "Editor @Growth Square | Software Engineer | AI & Product Development | Cloud & Full-Stack"
     ],
     "about_texts": [
       "Hey, I'm Vishal Kumar Ojha, a pre final-year student at VIT Bhopal University, passionate about building impactful full-stack web applications and AI-driven solutions. As the developer and contributor to various academic research projects, I specialize in full-stack development using React.js, Node.js, and Python, alongside machine learning and cloud technologies like AWS.",
@@ -146,115 +140,52 @@
   ],
   "experiences": [
     {
-      "company": "Liomonk Pvt Ltd",
-      "logo": "/liomonk-logo.png",
-      "position": "Co-Founder",
-      "department": "Founding Team",
-      "period": "Dec 2025 - Present",
+      "company": "The Growth Square",
+      "position": "Editor",
+      "department": "Personal Branding Agency",
+      "period": "Sep 2026 - Present",
       "type": "Full-time",
-      "location": "Remote",
-      "mode": "Remote",
-      "description": "Building the future of AI-driven solutions and technical infrastructure."
+      "location": "Bengaluru, Karnataka, India",
+      "mode": "Hybrid"
     },
     {
-      "company": "VIT Bhopal University",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/c/cf/Vellore_Institute_of_Technology_seal_2017.svg",
-      "position": "Event Coordinator",
-      "department": "Health Hack Hackathon",
-      "period": "Jan 2025 - Feb 2025",
-      "type": "Part-time",
-      "location": "VIT Bhopal",
-      "mode": "On-site",
-      "description": "Coordinator at the Health Hackathon organized by VIT BHOPAL UNIVERSITY in collaboration with John Hopkins university and lead of Venue and Crowd management team.",
-      "certificate": "/health-hack-cert.png"
-    },
-    {
-      "company": "Notion",
-      "logo": "https://logo.clearbit.com/notion.so",
-      "position": "Community Manager",
-      "department": "Notion Community",
-      "period": "Sep 2025 - Present",
-      "type": "Part-time",
+      "company": "scramble labs",
+      "position": "Software Engineer Intern",
+      "period": "Feb 2025 - Aug 2026",
+      "type": "Software Engineering",
       "location": "Remote",
       "mode": "Remote",
-      "description": "To integrate technology, productivity, and collaboration for smarter learning and project execution."
+      "description": "Helped in developing and enhancing software features by collaborating with engineering teams to design, implement, and test scalable applications.\n\nParticipated in the complete software development lifecycle, including requirement analysis, debugging, code reviews, and performance optimization.\n\nWorked with modern development tools, frameworks, and best practices to deliver reliable solutions while improving application functionality and user experience.",
+      "logo": "https://logo.clearbit.com/scramblelabs.com"
+    },
+    {
+      "company": "scramble labs",
+      "logo": "https://logo.clearbit.com/scramblelabs.com",
+      "position": "Founder’s Office Intern",
+      "period": "Jan 2026 - Feb 2026",
+      "type": "Internship",
+      "location": "Delhi, India",
+      "mode": "Hybrid",
+      "description": "Orchestrated GTM outreach across 12 B2B partners and 18 startups, securing 5 enterprise clients across 4 events, driving revenue growth and faster execution in an early-stage startup environment.\n\nLed B2B2C student acquisition for the School of Startups cohort, achieving a 40% conversion rate (4/10 universities pitched) in Madhya Pradesh and securing 26 paid sign-ups, generating ₹5,20,000 in top-line revenue.\n\nBuilt dashboards, SOPs, and workflow automations using Google Sheets, Notion, Airtable, HubSpot, and Google Apps Script to streamline outreach, follow-ups, and cross-functional coordination, while supporting campus ambassador performance through regular reviews and bottleneck resolution, reducing manual follow-up time and increasing lead conversion."
     },
     {
       "company": "Hindalco Industries Limited",
       "logo": "https://logo.clearbit.com/hindalco.com",
-      "position": "Project Intern",
-      "department": "Summer Intern",
-      "period": "Jun 2025 - Jul 2025",
-      "type": "Part-time",
-      "location": "Remote",
-      "mode": "Remote",
-      "description": "To integrate technology, productivity, and collaboration for smarter learning and project execution."
-    },
-    {
-      "company": "scramble labs , Arno codes & Arno Labs",
-      "logo": "https://logo.clearbit.com/scramblelabs.com",
-      "position": "Founding Team",
-      "department": "Web & Android Development",
-      "period": "Aug 2025 - Present",
-      "type": "Part-time",
-      "location": "Remote",
-      "mode": "Remote"
-    },
-    {
-      "company": "Notion Community VIT Bhopal",
-      "logo": "https://logo.clearbit.com/notion.so",
-      "position": "Board Advisor",
-      "department": "Leadership",
-      "period": "Apr 2025 - Present",
-      "type": "Part-time",
-      "location": "VIT Bhopal",
-      "mode": "Hybrid",
-      "skills": [
-        "Team Building",
-        "Strategic Planning",
-        "Leadership"
-      ]
-    },
-    {
-      "company": "VIT Bhopal AI Innovators Hub",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/c/cf/Vellore_Institute_of_Technology_seal_2017.svg",
-      "position": "Project Collaborator",
-      "department": "AI & Innovation",
-      "period": "Jul 2025 - Sep 2025",
-      "type": "Part-time",
-      "location": "VIT Bhopal",
-      "mode": "On-site"
-    },
-    {
-      "company": "TheSmartBridge",
-      "logo": "https://logo.clearbit.com/thesmartbridge.com",
-      "position": "Virtual Internship Trainee – Salesforce Developer",
-      "department": "Salesforce Development",
-      "period": "May 2025 - Jul 2025",
+      "position": "Project Engineering Intern",
+      "period": "May 2026 - Jun 2026",
       "type": "Internship",
-      "location": "Remote",
-      "mode": "Remote",
-      "description": "Powered by Salesforce"
+      "location": "Renukut, Uttar Pradesh, India",
+      "mode": "On-site"
     },
     {
       "company": "Pawzz Foundation",
       "logo": "https://logo.clearbit.com/pawzz.org",
       "position": "Graphic Designer",
-      "department": "Design",
       "period": "May 2025 - Jun 2025",
-      "type": "Internship",
+      "type": "Extracurricular",
       "location": "Remote",
-      "mode": "Remote"
-    },
-    {
-      "company": "buildspace",
-      "logo": "https://logo.clearbit.com/buildspace.so",
-      "position": "Member S5",
-      "department": "Community",
-      "period": "Jun 2024 - Aug 2024",
-      "type": "Part-time",
-      "location": "Remote",
-      "mode": "Remote"
+      "mode": "Creative",
+      "description": "Created visual content and design assets supporting the organization's communication and outreach initiatives."
     },
     {
       "company": "Earth5R",
@@ -286,6 +217,17 @@
         "Web Content Creation",
         "Web Content Writing"
       ]
+    },
+    {
+      "company": "Notion",
+      "logo": "https://logo.clearbit.com/notion.so",
+      "position": "Community Manager",
+      "department": "Notion Community",
+      "period": "Sep 2025 - Present",
+      "type": "Part-time",
+      "location": "Remote",
+      "mode": "Remote",
+      "description": "To integrate technology, productivity, and collaboration for smarter learning and project execution."
     }
   ],
   "certifications": [

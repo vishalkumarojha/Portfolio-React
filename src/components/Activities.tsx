@@ -1,24 +1,14 @@
-import { pad } from '../lib/data'
-import { activities } from '../lib/activities'
-import RoleIndex from './ui/RoleIndex'
+import { activityOrganizations } from '../lib/activities'
+import OrganizationIndex from './ui/OrganizationIndex'
 
 export default function Activities() {
   return (
-    <RoleIndex
+    <OrganizationIndex
       id="activities"
       label="Activities & Leadership"
       title="Where I have been involved."
-      lede="College leadership, community work, virtual internships and extracurricular activities alongside my technical work."
-      items={activities}
-      prefix="activity"
-      listLabel="Activities"
-      marker="index"
-      noun="activities"
-      action={(active, total) => (
-        <span className="eyebrow">
-          {pad(active)} / {String(total).padStart(2, '0')}
-        </span>
-      )}
+      lede="The organisations and events I have been part of, and the roles I held inside each one."
+      organizations={activityOrganizations}
     />
   )
 }
